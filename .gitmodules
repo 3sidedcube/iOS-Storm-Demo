@@ -1,0 +1,12 @@
+[submodule "Thunder Basics"]
+	path = Thunder Basics
+	url = https://github.com/3sidedcube/iOS-ThunderBasics.git
+[submodule "Thunder Request"]
+	path = Thunder Request
+	url = https://github.com/3sidedcube/iOS-ThunderRequest.git
+[submodule "Thunder Table"]
+	path = Thunder Table
+	url = https://github.com/3sidedcube/iOS-ThunderTable.git
+[submodule "Thunder Cloud"]
+	path = Thunder Cloud
+	url = https://github.com/3sidedcube/iOS-ThunderCloud.git
