@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 @import ThunderCloud;
-#import "TSCTestViewController.h"
-#import "TSCTestTableViewController.h"
 
 @interface AppDelegate ()
 
