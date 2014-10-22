@@ -17,12 +17,8 @@
 		C226784319E2B2DC0070B470 /* ThunderBasics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782019E2B2950070B470 /* ThunderBasics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C2C57C0419E2AAEC000F6F1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57C0319E2AAEC000F6F1E /* main.m */; };
 		C2C57C0719E2AAEC000F6F1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57C0619E2AAEC000F6F1E /* AppDelegate.m */; };
-		C2C57C0A19E2AAEC000F6F1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57C0919E2AAEC000F6F1E /* ViewController.m */; };
 		C2C57C0F19E2AAEC000F6F1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C57C0E19E2AAEC000F6F1E /* Images.xcassets */; };
-		C2C57C1219E2AAEC000F6F1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C57C1019E2AAEC000F6F1E /* LaunchScreen.xib */; };
 		C2C57C1E19E2AAEC000F6F1E /* Storm_Demo_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57C1D19E2AAEC000F6F1E /* Storm_Demo_ProjectTests.m */; };
-		C2C57C2C19E2AC03000F6F1E /* TSCTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57C2919E2AC03000F6F1E /* TSCTestTableViewController.m */; };
-		C2C57C2D19E2AC03000F6F1E /* TSCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57C2B19E2AC03000F6F1E /* TSCTestViewController.m */; };
 		C2C57C3019E2ADBD000F6F1E /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2C57C2F19E2ADBD000F6F1E /* Bundle */; };
 /* End PBXBuildFile section */
 
@@ -147,17 +143,10 @@
 		C2C57C0319E2AAEC000F6F1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2C57C0519E2AAEC000F6F1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2C57C0619E2AAEC000F6F1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C2C57C0819E2AAEC000F6F1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C2C57C0919E2AAEC000F6F1E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C2C57C0E19E2AAEC000F6F1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C2C57C1119E2AAEC000F6F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C2C57C1719E2AAEC000F6F1E /* Storm Demo ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storm Demo ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C57C1C19E2AAEC000F6F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C57C1D19E2AAEC000F6F1E /* Storm_Demo_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Storm_Demo_ProjectTests.m; sourceTree = "<group>"; };
-		C2C57C2819E2AC03000F6F1E /* TSCTestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCTestTableViewController.h; sourceTree = "<group>"; };
-		C2C57C2919E2AC03000F6F1E /* TSCTestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCTestTableViewController.m; sourceTree = "<group>"; };
-		C2C57C2A19E2AC03000F6F1E /* TSCTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCTestViewController.h; sourceTree = "<group>"; };
-		C2C57C2B19E2AC03000F6F1E /* TSCTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCTestViewController.m; sourceTree = "<group>"; };
 		C2C57C2F19E2ADBD000F6F1E /* Bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,11 +236,8 @@
 				C2C57C2E19E2AC08000F6F1E /* View Controllers */,
 				C2C57C0519E2AAEC000F6F1E /* AppDelegate.h */,
 				C2C57C0619E2AAEC000F6F1E /* AppDelegate.m */,
-				C2C57C0819E2AAEC000F6F1E /* ViewController.h */,
-				C2C57C0919E2AAEC000F6F1E /* ViewController.m */,
 				C2C57C0E19E2AAEC000F6F1E /* Images.xcassets */,
 				C2C57C2F19E2ADBD000F6F1E /* Bundle */,
-				C2C57C1019E2AAEC000F6F1E /* LaunchScreen.xib */,
 				C2C57C0119E2AAEC000F6F1E /* Supporting Files */,
 			);
 			path = "Storm Demo Project";
@@ -286,10 +272,6 @@
 		C2C57C2E19E2AC08000F6F1E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C2C57C2819E2AC03000F6F1E /* TSCTestTableViewController.h */,
-				C2C57C2919E2AC03000F6F1E /* TSCTestTableViewController.m */,
-				C2C57C2A19E2AC03000F6F1E /* TSCTestViewController.h */,
-				C2C57C2B19E2AC03000F6F1E /* TSCTestViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -457,7 +439,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2C57C1219E2AAEC000F6F1E /* LaunchScreen.xib in Resources */,
 				C2C57C0F19E2AAEC000F6F1E /* Images.xcassets in Resources */,
 				C2C57C3019E2ADBD000F6F1E /* Bundle in Resources */,
 			);
@@ -493,9 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2C57C2C19E2AC03000F6F1E /* TSCTestTableViewController.m in Sources */,
-				C2C57C2D19E2AC03000F6F1E /* TSCTestViewController.m in Sources */,
-				C2C57C0A19E2AAEC000F6F1E /* ViewController.m in Sources */,
 				C2C57C0719E2AAEC000F6F1E /* AppDelegate.m in Sources */,
 				C2C57C0419E2AAEC000F6F1E /* main.m in Sources */,
 			);
@@ -538,17 +516,6 @@
 			targetProxy = C2C57C1819E2AAEC000F6F1E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C2C57C1019E2AAEC000F6F1E /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C2C57C1119E2AAEC000F6F1E /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C2C57C1F19E2AAEC000F6F1E /* Debug */ = {
