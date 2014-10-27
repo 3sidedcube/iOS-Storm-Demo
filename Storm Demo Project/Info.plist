@@ -23,11 +23,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>TSCAPIVersion</key>
-	<string>test</string>
+	<string>v3.8</string>
 	<key>TSCAppId</key>
 	<string>1</string>
 	<key>TSCBaseURL</key>
-	<string>https://storm.cubeapis.com</string>
+	<string>https://api.stormcorp.co</string>
 	<key>TSCBuildDate</key>
 	<string>1401196463</string>
 	<key>TSCTrackingId</key>
@@ -49,5 +49,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 </dict>
 </plist>
