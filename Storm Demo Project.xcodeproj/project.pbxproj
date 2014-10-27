@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33BC395019FE4A2000D00987 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BC394F19FE4A2000D00987 /* LaunchScreen.xib */; };
 		C226783519E2B2CC0070B470 /* ThunderCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; };
 		C226783619E2B2CC0070B470 /* ThunderCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C226783A19E2B2D30070B470 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782C19E2B2950070B470 /* ThunderRequest.framework */; };
@@ -134,6 +135,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		33BC394F19FE4A2000D00987 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderCloud.xcodeproj; path = "Thunder Cloud/ThunderCloud.xcodeproj"; sourceTree = "<group>"; };
 		C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderRequest.xcodeproj; path = "Thunder Request/ThunderRequest.xcodeproj"; sourceTree = "<group>"; };
 		C226781719E2B2950070B470 /* ThunderTable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderTable.xcodeproj; path = "Thunder Table/ThunderTable.xcodeproj"; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 		C2C57C0119E2AAEC000F6F1E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				33BC394F19FE4A2000D00987 /* LaunchScreen.xib */,
 				C2C57C0219E2AAEC000F6F1E /* Info.plist */,
 				C2C57C0319E2AAEC000F6F1E /* main.m */,
 			);
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C57C0F19E2AAEC000F6F1E /* Images.xcassets in Resources */,
+				33BC395019FE4A2000D00987 /* LaunchScreen.xib in Resources */,
 				C2C57C3019E2ADBD000F6F1E /* Bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,7 +469,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "##################################################\n# Setup variables for folders and plist entries  #\n# Generally you should only need to change the   #\n# baseFolder variable                            #\n##################################################\nbaseFolder=\"Storm Demo Project\";\nbundleFolder=\"Bundle\";\nappId=$(/usr/libexec/PlistBuddy -c \"Print TSCAppId\" \"$INFOPLIST_FILE\");\nbaseUrl=$(/usr/libexec/PlistBuddy -c \"Print TSCBaseURL\" \"$INFOPLIST_FILE\");\napiVersion=$(/usr/libexec/PlistBuddy -c \"Print TSCAPIVersion\" \"$INFOPLIST_FILE\");\n\n######################################################\n# MANUAL OVERRIDE                                    #\n# If you wish to pull a custom bundle define so here #\n######################################################\noverrideEnabled=FALSE\noverrideUrl=\"https://s3.amazonaws.com/arc.cubeapis.com/bundles/1/test/1369324617_1385400529.tar.gz\";\n\n###########################\n# Download latest files   #\n###########################\nmkdir -p \"$baseFolder/$appId\";\n\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\ncd \"../../\";\n\nif $overrideEnabled ; then\ncurl $overrideUrl -o \"bundle.tar.gz\" -v\nelse\n\ncurl $baseUrl/$apiVersion/apps/$appId/bundle?environment=test -vLo \"bundle.tar.gz\"\n\n#TEMPORARY. WE NEED TO GET STEVE TO ENABLE THE NEW REDIRECT\n\n#regex=\"file\\\":\\\"(.*)\\\"\"\n#json=$(curl $baseUrl/$apiVersion/apps/$appId/bundle?environment=test -s);\n#[[ $json =~ $regex ]]\n#filename=\"${BASH_REMATCH[1]}\"\n#curl ${filename//[\\\\]/} -o \"bundle.tar.gz\"\n\n#END TEMPORARY\nfi\n\n\ntar -zxf \"bundle.tar.gz\" -C \"$baseFolder/$appId\"\n\nrm \"bundle.tar.gz\"\n\n############################################################################################\n# Setup Bundle directory.                                                                  #\n# Ensure this folder is included as a refrenced folder in your project once it is created  #\n############################################################################################\nmkdir -p \"$baseFolder/$bundleFolder\";\n\nif [ -d \"$baseFolder/$bundleFolder\" ]; then\ncd \"$baseFolder/$bundleFolder\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\n#######################################################################\n# Copy downloaded files from numbered app folder into bundle folder   #\n#######################################################################\ncd \"../../\"\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do cp -R \"$i\" \"../$bundleFolder/$i\"; done;\nfi";
+			shellScript = "##################################################\n# Setup variables for folders and plist entries  #\n# Generally you should only need to change the   #\n# baseFolder variable                            #\n##################################################\nbaseFolder=\"Storm Demo Project\";\nbundleFolder=\"Bundle\";\nappId=$(/usr/libexec/PlistBuddy -c \"Print TSCAppId\" \"$INFOPLIST_FILE\");\nbaseUrl=$(/usr/libexec/PlistBuddy -c \"Print TSCBaseURL\" \"$INFOPLIST_FILE\");\napiVersion=$(/usr/libexec/PlistBuddy -c \"Print TSCAPIVersion\" \"$INFOPLIST_FILE\");\n\n######################################################\n# MANUAL OVERRIDE                                    #\n# If you wish to pull a custom bundle define so here #\n######################################################\noverrideEnabled=FALSE\noverrideUrl=\"https://s3.amazonaws.com/arc.cubeapis.com/bundles/1/test/1369324617_1385400529.tar.gz\";\n\n###########################\n# Download latest files   #\n###########################\nmkdir -p \"$baseFolder/$appId\";\n\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\ncd \"../../\";\n\nif $overrideEnabled ; then\ncurl $overrideUrl -o \"bundle.tar.gz\" -v\nelse\n\ncurl $baseUrl/$apiVersion/apps/$appId/bundle?environment=live -vLo \"bundle.tar.gz\"\n\n#TEMPORARY. WE NEED TO GET STEVE TO ENABLE THE NEW REDIRECT\n\n#regex=\"file\\\":\\\"(.*)\\\"\"\n#json=$(curl $baseUrl/$apiVersion/apps/$appId/bundle?environment=test -s);\n#[[ $json =~ $regex ]]\n#filename=\"${BASH_REMATCH[1]}\"\n#curl ${filename//[\\\\]/} -o \"bundle.tar.gz\"\n\n#END TEMPORARY\nfi\n\n\ntar -zxf \"bundle.tar.gz\" -C \"$baseFolder/$appId\"\n\nrm \"bundle.tar.gz\"\n\n############################################################################################\n# Setup Bundle directory.                                                                  #\n# Ensure this folder is included as a refrenced folder in your project once it is created  #\n############################################################################################\nmkdir -p \"$baseFolder/$bundleFolder\";\n\nif [ -d \"$baseFolder/$bundleFolder\" ]; then\ncd \"$baseFolder/$bundleFolder\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\n#######################################################################\n# Copy downloaded files from numbered app folder into bundle folder   #\n#######################################################################\ncd \"../../\"\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do cp -R \"$i\" \"../$bundleFolder/$i\"; done;\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -535,7 +539,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 3 Sided Cube Design Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 3 Sided Cube Design Ltd";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -555,6 +560,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "c8bc3f7d-727a-4ff9-94c0-b2c6ade8d798";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -577,7 +583,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 3 Sided Cube Design Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 3 Sided Cube Design Ltd";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -590,6 +597,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "c8bc3f7d-727a-4ff9-94c0-b2c6ade8d798";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
