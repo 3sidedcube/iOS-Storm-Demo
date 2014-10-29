@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "StormTheme.h"
 @import ThunderCloud;
 
 @interface AppDelegate ()
@@ -21,6 +22,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [TSCThemeManager setSharedTheme:[StormTheme new]];
+    self.window.tintColor = [UIColor blackColor];
     
     self.window.rootViewController = [TSCAppViewController new];
     
