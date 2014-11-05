@@ -18,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //Setup the window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -25,8 +26,10 @@
     
     [self.window makeKeyAndVisible];
     
+    //Setup the shared theme
     [TSCThemeManager setSharedTheme:[StormTheme new]];
     
+    //Customise the app colours based on the values in the info.plist
     if (![[[NSBundle mainBundle] infoDictionary][@"TSCMainColor"] isEqualToString:@"000000"]) {
         UINavigationBar *navigationBar = [UINavigationBar appearance];
         [navigationBar setBarTintColor:[[TSCThemeManager sharedTheme] mainColor]];
@@ -46,10 +49,23 @@
         [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     }
     
-    
     self.window.tintColor = [[TSCThemeManager sharedTheme] mainColor];
     
+    //Register for notifications
+    [TSCStormNotificationHelper setupNotifications];
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    [TSCStormNotificationHelper registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSLog(@"Token:%@", deviceToken.description);
+    [TSCStormNotificationHelper registerPushToken:deviceToken];
 }
 
 @end
