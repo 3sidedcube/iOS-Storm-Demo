@@ -6,13 +6,16 @@
 //  Copyright (c) 2014 threesidedcube. All rights reserved.
 //
 
+#define TSCMainColor [[NSBundle mainBundle] infoDictionary][@"TSCMainColor"]
+
 #import "StormTheme.h"
+@import ThunderBasics;
 
 @implementation StormTheme
 
 - (UIColor *)mainColor
 {
-    return [UIColor blackColor];
+    return [UIColor colorWithHexString:TSCMainColor];
 }
 
 @end
