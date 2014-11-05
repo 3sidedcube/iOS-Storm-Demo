@@ -16,20 +16,39 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [TSCThemeManager setSharedTheme:[StormTheme new]];
-    self.window.tintColor = [UIColor blackColor];
-    
     self.window.rootViewController = [TSCAppViewController new];
     
     [self.window makeKeyAndVisible];
-        
+    
+    [TSCThemeManager setSharedTheme:[StormTheme new]];
+    
+    if (![[[NSBundle mainBundle] infoDictionary][@"TSCMainColor"] isEqualToString:@"000000"]) {
+        UINavigationBar *navigationBar = [UINavigationBar appearance];
+        [navigationBar setBarTintColor:[[TSCThemeManager sharedTheme] mainColor]];
+    }
+    
+    if ([[[NSBundle mainBundle] infoDictionary][@"TSCStatusBarStyle"] isEqualToString:@"Black"]) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        UINavigationBar *navigationBar = [UINavigationBar appearance];
+        [navigationBar setTintColor:[UIColor blackColor]];
+        [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
+    }
+    
+    if ([[[NSBundle mainBundle] infoDictionary][@"TSCStatusBarStyle"] isEqualToString:@"White"]) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        UINavigationBar *navigationBar = [UINavigationBar appearance];
+        [navigationBar setTintColor:[UIColor whiteColor]];
+        [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    }
+    
+    
+    self.window.tintColor = [[TSCThemeManager sharedTheme] mainColor];
+    
     return YES;
 }
 
