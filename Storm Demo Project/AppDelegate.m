@@ -26,7 +26,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [SDPWelcomeViewController new];
+    [TSCStormViewController registerNativePageName:@"intro" toViewControllerClass:[SDPWelcomeViewController class]];
+    
+    self.window.rootViewController = [TSCAppViewController new];
     
     [self.window makeKeyAndVisible];
     
@@ -49,6 +51,9 @@
         [navigationBar setTintColor:[UIColor whiteColor]];
         [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     }
+    
+    UITabBar *tabBar = [UITabBar appearance];
+    tabBar.barTintColor = [UIColor whiteColor];
     
     self.window.tintColor = [[TSCThemeManager sharedTheme] mainColor];
     

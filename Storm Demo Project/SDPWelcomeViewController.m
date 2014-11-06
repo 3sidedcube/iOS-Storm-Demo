@@ -9,12 +9,14 @@
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 #import "SDPWelcomeViewController.h"
 @import ThunderTable;
+@import ThunderCloud;
 
 @interface SDPWelcomeViewController ()
 
 @property (nonatomic, strong) UIImageView *flashImage;
 @property (nonatomic, strong) UIView *logoView;
 @property (nonatomic, assign) BOOL flipped;
+@property (nonatomic, assign) BOOL hasAppeared;
 
 @end
 
@@ -29,14 +31,14 @@
     
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, self.view.frame.size.width, 35)];
     nameLabel.font = [UIFont boldSystemFontOfSize:28];
-    nameLabel.text = @"You're in, Dan!";
+    nameLabel.text = [NSString stringWithFormat:@"You're in, %@", [[NSBundle mainBundle] infoDictionary][@"SDPPersonName"]];
     nameLabel.textAlignment = NSTextAlignmentCenter;
     nameLabel.textColor = [[TSCThemeManager sharedTheme] primaryLabelColor];
     [self.view addSubview:nameLabel];
     
     UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, nameLabel.frame.origin.y + nameLabel.frame.size.height + 15, 250, 35)];
     messageLabel.font = [UIFont systemFontOfSize:26];
-    messageLabel.text = @"Welcome to the Storm Corp initiative.";
+    messageLabel.text = [NSString stringWithLocalisationKey:@"_INTRO_DESCRIPTION_LABEL"];
     messageLabel.textColor = [[TSCThemeManager sharedTheme] primaryLabelColor];
     messageLabel.lineBreakMode = NSLineBreakByWordWrapping;
     messageLabel.numberOfLines = 2;
@@ -52,7 +54,7 @@
     
     UILabel *shakeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, stormImage.frame.size.height + stormImage.frame.origin.y + 50, 250, 35)];
     shakeLabel.font = [UIFont boldSystemFontOfSize:35];
-    shakeLabel.text = @"Shake to begin!";
+    shakeLabel.text = [NSString stringWithLocalisationKey:@"_SHAKE_LABEL"];
     shakeLabel.textColor = [[TSCThemeManager sharedTheme] primaryLabelColor];
     [shakeLabel sizeToFit];
     shakeLabel.center = CGPointMake(self.view.center.x, shakeLabel.center.y);
@@ -68,19 +70,40 @@
     self.logoView.layer.cornerRadius = self.logoView.frame.size.width/2;
     self.logoView.center = stormImage.center;
     
+    UIImageView *logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    [logoImage setImageURL:[NSURL URLWithString:[[NSBundle mainBundle] infoDictionary][@"SDPLogoImageURL"]] placeholderImage:nil];
+   // [logoImage sizeThatFits:CGSizeMake(100, 100)];
+    [self.logoView addSubview:logoImage];
+    
     UIView *containterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 150)];
     containterView.center = stormImage.center;
     [self.view addSubview:containterView];
     [containterView addSubview:self.flashImage];
     self.flashImage.center = CGPointMake(containterView.frame.size.width/2, containterView.frame.size.height/2);
     self.logoView.center = CGPointMake(containterView.frame.size.width/2, containterView.frame.size.height/2);
+    
+    logoImage.center = self.logoView.center;
+    
+    [self performSelector:@selector(flipCenter) withObject:nil afterDelay:5.0];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [self performSelector:@selector(flipCenter) withObject:nil afterDelay:5.0];
 }
 
 - (void)flipCenter
