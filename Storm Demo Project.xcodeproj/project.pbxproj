@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33BC395019FE4A2000D00987 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BC394F19FE4A2000D00987 /* LaunchScreen.xib */; };
+		33C47FA41A0B6A66007BD920 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33C47FA31A0B6A66007BD920 /* Settings.bundle */; };
 		C226783519E2B2CC0070B470 /* ThunderCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; };
 		C226783619E2B2CC0070B470 /* ThunderCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C226783A19E2B2D30070B470 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782C19E2B2950070B470 /* ThunderRequest.framework */; };
@@ -137,6 +138,7 @@
 
 /* Begin PBXFileReference section */
 		33BC394F19FE4A2000D00987 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		33C47FA31A0B6A66007BD920 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderCloud.xcodeproj; path = "Thunder Cloud/ThunderCloud.xcodeproj"; sourceTree = "<group>"; };
 		C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderRequest.xcodeproj; path = "Thunder Request/ThunderRequest.xcodeproj"; sourceTree = "<group>"; };
 		C226781719E2B2950070B470 /* ThunderTable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderTable.xcodeproj; path = "Thunder Table/ThunderTable.xcodeproj"; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				C2C57C0619E2AAEC000F6F1E /* AppDelegate.m */,
 				C2D21F0B19FE87BB00F145F5 /* StormTheme.h */,
 				C2D21F0C19FE87BB00F145F5 /* StormTheme.m */,
+				33C47FA31A0B6A66007BD920 /* Settings.bundle */,
 				C2C57C0E19E2AAEC000F6F1E /* Images.xcassets */,
 				C2C57C2F19E2ADBD000F6F1E /* Bundle */,
 				C2C57C0119E2AAEC000F6F1E /* Supporting Files */,
@@ -447,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C47FA41A0B6A66007BD920 /* Settings.bundle in Resources */,
 				C2C57C0F19E2AAEC000F6F1E /* Images.xcassets in Resources */,
 				33BC395019FE4A2000D00987 /* LaunchScreen.xib in Resources */,
 				C2C57C3019E2ADBD000F6F1E /* Bundle in Resources */,

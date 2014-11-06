@@ -27,7 +27,12 @@
     [self.window makeKeyAndVisible];
     
     //Setup the shared theme
-    [TSCThemeManager setSharedTheme:[StormTheme new]];
+    
+    StormTheme *stormTheme = [StormTheme new];
+    
+    [TSCThemeManager setSharedTheme:stormTheme];
+    
+    [[TSCDeveloperController sharedController] installDeveloperModeToWindow:self.window currentTheme:stormTheme];
     
     //Customise the app colours based on the values in the info.plist
     if (![[[NSBundle mainBundle] infoDictionary][@"TSCMainColor"] isEqualToString:@"000000"]) {
@@ -57,6 +62,7 @@
     return YES;
 }
 
+//Registering for notifications
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
 {
     [TSCStormNotificationHelper registerForRemoteNotifications];
@@ -68,4 +74,9 @@
     [TSCStormNotificationHelper registerPushToken:deviceToken];
 }
 
+//Handling developer mode
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [[TSCDeveloperController sharedController] appResumedFromBackground];
+}
 @end
