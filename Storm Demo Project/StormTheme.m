@@ -7,6 +7,7 @@
 //
 
 #define TSCMainColor [[NSBundle mainBundle] infoDictionary][@"TSCMainColor"]
+#define TSCStatusBarStyle [[NSBundle mainBundle] infoDictionary][@"TSCStatusBarStyle"]
 
 #import "StormTheme.h"
 @import ThunderBasics;
@@ -16,6 +17,15 @@
 - (UIColor *)mainColor
 {
     return [UIColor colorWithHexString:TSCMainColor];
+}
+
+- (UIColor *)primaryLabelColor
+{
+    if ([TSCStatusBarStyle isEqualToString:@"White"]) {
+        return [UIColor whiteColor];
+    } else {
+        return [UIColor blackColor];
+    }
 }
 
 @end

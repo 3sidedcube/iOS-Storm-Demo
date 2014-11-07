@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33BC395019FE4A2000D00987 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BC394F19FE4A2000D00987 /* LaunchScreen.xib */; };
 		33C47FA41A0B6A66007BD920 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33C47FA31A0B6A66007BD920 /* Settings.bundle */; };
+		36402DEA1A0B71E700C0FBD1 /* SDPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36402DE91A0B71E700C0FBD1 /* SDPWelcomeViewController.m */; };
 		C226783519E2B2CC0070B470 /* ThunderCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; };
 		C226783619E2B2CC0070B470 /* ThunderCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C226783A19E2B2D30070B470 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782C19E2B2950070B470 /* ThunderRequest.framework */; };
@@ -139,6 +140,8 @@
 /* Begin PBXFileReference section */
 		33BC394F19FE4A2000D00987 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		33C47FA31A0B6A66007BD920 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		36402DE81A0B71E700C0FBD1 /* SDPWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPWelcomeViewController.h; sourceTree = "<group>"; };
+		36402DE91A0B71E700C0FBD1 /* SDPWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPWelcomeViewController.m; sourceTree = "<group>"; };
 		C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderCloud.xcodeproj; path = "Thunder Cloud/ThunderCloud.xcodeproj"; sourceTree = "<group>"; };
 		C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderRequest.xcodeproj; path = "Thunder Request/ThunderRequest.xcodeproj"; sourceTree = "<group>"; };
 		C226781719E2B2950070B470 /* ThunderTable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderTable.xcodeproj; path = "Thunder Table/ThunderTable.xcodeproj"; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 		C2C57C2E19E2AC08000F6F1E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				36402DE81A0B71E700C0FBD1 /* SDPWelcomeViewController.h */,
+				36402DE91A0B71E700C0FBD1 /* SDPWelcomeViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -469,14 +474,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		C2C57C2719E2AB37000F6F1E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "##################################################\n# Setup variables for folders and plist entries  #\n# Generally you should only need to change the   #\n# baseFolder variable                            #\n##################################################\nbaseFolder=\"Storm Demo Project\";\nbundleFolder=\"Bundle\";\nappId=$(/usr/libexec/PlistBuddy -c \"Print TSCAppId\" \"$INFOPLIST_FILE\");\nbaseUrl=$(/usr/libexec/PlistBuddy -c \"Print TSCBaseURL\" \"$INFOPLIST_FILE\");\napiVersion=$(/usr/libexec/PlistBuddy -c \"Print TSCAPIVersion\" \"$INFOPLIST_FILE\");\n\n######################################################\n# MANUAL OVERRIDE                                    #\n# If you wish to pull a custom bundle define so here #\n######################################################\noverrideEnabled=FALSE\noverrideUrl=\"https://s3.amazonaws.com/arc.cubeapis.com/bundles/1/test/1369324617_1385400529.tar.gz\";\n\n###########################\n# Download latest files   #\n###########################\nmkdir -p \"$baseFolder/$appId\";\n\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\ncd \"../../\";\n\nif $overrideEnabled ; then\ncurl $overrideUrl -o \"bundle.tar.gz\" -v\nelse\n\ncurl $baseUrl/$apiVersion/apps/$appId/bundle?environment=live -vLo \"bundle.tar.gz\"\n\n#TEMPORARY. WE NEED TO GET STEVE TO ENABLE THE NEW REDIRECT\n\n#regex=\"file\\\":\\\"(.*)\\\"\"\n#json=$(curl $baseUrl/$apiVersion/apps/$appId/bundle?environment=test -s);\n#[[ $json =~ $regex ]]\n#filename=\"${BASH_REMATCH[1]}\"\n#curl ${filename//[\\\\]/} -o \"bundle.tar.gz\"\n\n#END TEMPORARY\nfi\n\n\ntar -zxf \"bundle.tar.gz\" -C \"$baseFolder/$appId\"\n\nrm \"bundle.tar.gz\"\n\n############################################################################################\n# Setup Bundle directory.                                                                  #\n# Ensure this folder is included as a refrenced folder in your project once it is created  #\n############################################################################################\nmkdir -p \"$baseFolder/$bundleFolder\";\n\nif [ -d \"$baseFolder/$bundleFolder\" ]; then\ncd \"$baseFolder/$bundleFolder\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\n#######################################################################\n# Copy downloaded files from numbered app folder into bundle folder   #\n#######################################################################\ncd \"../../\"\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do cp -R \"$i\" \"../$bundleFolder/$i\"; done;\nfi";
 		};
@@ -490,6 +495,7 @@
 				C2D21F0D19FE87BB00F145F5 /* StormTheme.m in Sources */,
 				C2C57C0719E2AAEC000F6F1E /* AppDelegate.m in Sources */,
 				C2C57C0419E2AAEC000F6F1E /* main.m in Sources */,
+				36402DEA1A0B71E700C0FBD1 /* SDPWelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

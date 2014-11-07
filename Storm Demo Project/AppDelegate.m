@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "StormTheme.h"
+#import "SDPWelcomeViewController.h"
 @import ThunderCloud;
 
 @interface AppDelegate ()
@@ -18,9 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    
     //Setup the window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [TSCStormViewController registerNativePageName:@"intro" toViewControllerClass:[SDPWelcomeViewController class]];
     
     self.window.rootViewController = [TSCAppViewController new];
     
@@ -53,6 +57,9 @@
         [navigationBar setTintColor:[UIColor whiteColor]];
         [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     }
+    
+    UITabBar *tabBar = [UITabBar appearance];
+    tabBar.barTintColor = [UIColor whiteColor];
     
     self.window.tintColor = [[TSCThemeManager sharedTheme] mainColor];
     

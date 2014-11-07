@@ -22,6 +22,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>SDPLogoImageURL</key>
+	<string>http://bluffers.com/wp-content/uploads/2013/04/Twitter.png</string>
+	<key>SDPPersonName</key>
+	<string>John</string>
 	<key>TSCAPIVersion</key>
 	<string>v1.0</string>
 	<key>TSCAppId</key>
@@ -31,9 +35,9 @@
 	<key>TSCBuildDate</key>
 	<string>1401196463</string>
 	<key>TSCMainColor</key>
-	<string>000000</string>
+	<string>4AB4E4</string>
 	<key>TSCStatusBarStyle</key>
-	<string>Black</string>
+	<string>White</string>
 	<key>TSCTrackingId</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
@@ -45,8 +49,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
