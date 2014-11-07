@@ -34,7 +34,7 @@
 	<string>https://api.stormcorp.co</string>
 	<key>TSCBuildDate</key>
 	<string>1401196463</string>
-	<key>TSCMainColor</key>
+	<key>TSCAppTintColor</key>
 	<string>4AB4E4</string>
 	<key>TSCStatusBarStyle</key>
 	<string>White</string>

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 threesidedcube. All rights reserved.
 //
 
-#define TSCMainColor [[NSBundle mainBundle] infoDictionary][@"TSCMainColor"]
+#define TSCMainColor [[NSBundle mainBundle] infoDictionary][@"TSCAppTintColor"]
 #define TSCStatusBarStyle [[NSBundle mainBundle] infoDictionary][@"TSCStatusBarStyle"]
 
 #import "StormTheme.h"
