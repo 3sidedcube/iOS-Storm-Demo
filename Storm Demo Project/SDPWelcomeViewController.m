@@ -25,20 +25,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self addParticles];
+   // [self addParticles];
     
     self.view.backgroundColor = [[TSCThemeManager sharedTheme] mainColor];
     
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, self.view.frame.size.width, 35)];
     nameLabel.font = [UIFont boldSystemFontOfSize:28];
     nameLabel.text = [NSString stringWithFormat:@"You're in, %@", [[NSBundle mainBundle] infoDictionary][@"SDPPersonName"]];
+    nameLabel.text = [NSString stringWithLocalisationKey:@"_LITE_TITLE"];
+    //nameLabel.text = @"Storm Lite";
     nameLabel.textAlignment = NSTextAlignmentCenter;
     nameLabel.textColor = [[TSCThemeManager sharedTheme] primaryLabelColor];
     [self.view addSubview:nameLabel];
     
     UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, nameLabel.frame.origin.y + nameLabel.frame.size.height + 15, 250, 35)];
     messageLabel.font = [UIFont systemFontOfSize:26];
-    messageLabel.text = [NSString stringWithLocalisationKey:@"_INTRO_DESCRIPTION_LABEL"];
+    messageLabel.text = [NSString stringWithLocalisationKey:@"_LITE_TITLE_DESCRIPTION"];
+    //messageLabel.text = @"It lets you edit \nnative localisations.";
     messageLabel.textColor = [[TSCThemeManager sharedTheme] primaryLabelColor];
     messageLabel.lineBreakMode = NSLineBreakByWordWrapping;
     messageLabel.numberOfLines = 2;
@@ -54,7 +57,8 @@
     
     UILabel *shakeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, stormImage.frame.size.height + stormImage.frame.origin.y + 50, 250, 35)];
     shakeLabel.font = [UIFont boldSystemFontOfSize:35];
-    shakeLabel.text = [NSString stringWithLocalisationKey:@"_SHAKE_LABEL"];
+    shakeLabel.text = [NSString stringWithLocalisationKey:@"_LITE_SHAKE_LABEL"];
+   // shakeLabel.text = @"Shake to edit!";
     shakeLabel.textColor = [[TSCThemeManager sharedTheme] primaryLabelColor];
     [shakeLabel sizeToFit];
     shakeLabel.center = CGPointMake(self.view.center.x, shakeLabel.center.y);
@@ -130,15 +134,15 @@
 
 - (void)shakeItBaby:(UIView *)view
 {
-    view.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-6));
+    view.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-1));
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    animation.duration = 0.35;
+    animation.duration = 1.0;
     animation.fillMode = kCAFillModeForwards;
     animation.removedOnCompletion = NO;
     animation.autoreverses = YES;
     animation.repeatCount = INFINITY;
-    animation.toValue = [NSNumber numberWithFloat:DEGREES_TO_RADIANS(12)];
+    animation.toValue = [NSNumber numberWithFloat:DEGREES_TO_RADIANS(2)];
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
     [view.layer addAnimation:animation forKey:@"allMyAnimations"];
@@ -147,7 +151,7 @@
 - (void)addParticles
 {
     CAEmitterLayer *emitterLayer = [CAEmitterLayer layer];
-    emitterLayer.emitterPosition = CGPointMake(self.view.bounds.size.width/2-25, self.view.bounds.size.height + 300);
+    emitterLayer.emitterPosition = CGPointMake(self.view.bounds.size.width/2-25, self.view.bounds.size.height + 100);
     emitterLayer.emitterZPosition = 10;
     emitterLayer.emitterSize = CGSizeMake(50, 0);
     emitterLayer.emitterShape = kCAEmitterLayerLine;
@@ -157,7 +161,7 @@
     emitterCell.scaleRange = 0.2;
     emitterCell.emissionRange = DEGREES_TO_RADIANS(100);
     emitterCell.lifetime = 50.0;
-    emitterCell.birthRate = 0.5;
+    emitterCell.birthRate = 0.1;
     emitterCell.velocity = 50;
     emitterCell.velocityRange = 10;
     emitterCell.yAcceleration = -1;
@@ -170,7 +174,7 @@
     emitterCell2.scaleRange = 0.2;
     emitterCell2.emissionRange = DEGREES_TO_RADIANS(100);;
     emitterCell2.lifetime = 50.0;
-    emitterCell2.birthRate = 0.5;
+    emitterCell2.birthRate = 0.1;
     emitterCell2.velocity = 50;
     emitterCell2.velocityRange = 10;
     emitterCell2.yAcceleration = -1;
@@ -183,7 +187,7 @@
     emitterCell3.scaleRange = 0.2;
     emitterCell3.emissionRange = DEGREES_TO_RADIANS(100);;
     emitterCell3.lifetime = 50.0;
-    emitterCell3.birthRate = 0.5;
+    emitterCell3.birthRate = 0.1;
     emitterCell3.velocity = 50;
     emitterCell3.velocityRange = 10;
     emitterCell3.yAcceleration = -1;
@@ -196,7 +200,7 @@
     emitterCell4.scaleRange = 0.2;
     emitterCell4.emissionRange = DEGREES_TO_RADIANS(100);
     emitterCell4.lifetime = 50.0;
-    emitterCell4.birthRate = 0.5;
+    emitterCell4.birthRate = 0.1;
     emitterCell4.velocity = 50;
     emitterCell4.velocityRange = 10;
     emitterCell4.yAcceleration = -1;
