@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "StormTheme.h"
 #import "SDPWelcomeViewController.h"
+#import "SDPListPage.h"
 @import ThunderCloud;
 
 @interface AppDelegate ()
@@ -20,17 +21,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-    //Setup the window
+    // Setup the window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
     [TSCStormViewController registerNativePageName:@"intro" toViewControllerClass:[SDPWelcomeViewController class]];
+    [TSCStormObject overideClass:[TSCListPage class] with:[SDPListPage class]];
     
     self.window.rootViewController = [TSCAppViewController new];
     
     [self.window makeKeyAndVisible];
     
-    //Setup the shared theme
+    // Setup the shared theme
     
     StormTheme *stormTheme = [StormTheme new];
     
@@ -38,11 +40,9 @@
     
     [[TSCDeveloperController sharedController] installDeveloperModeToWindow:self.window currentTheme:stormTheme];
     
-    //Customise the app colours based on the values in the info.plist
-    if (![[[NSBundle mainBundle] infoDictionary][@"TSCAppTintColor"] isEqualToString:@"000000"]) {
-        UINavigationBar *navigationBar = [UINavigationBar appearance];
-        [navigationBar setBarTintColor:[[TSCThemeManager sharedTheme] mainColor]];
-    }
+    // Customise the app colours based on the values in the info.plist
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    [navigationBar setBarTintColor:[[TSCThemeManager sharedTheme] mainColor]];
     
     if ([[[NSBundle mainBundle] infoDictionary][@"TSCStatusBarStyle"] isEqualToString:@"Black"]) {
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
@@ -63,13 +63,13 @@
     
     self.window.tintColor = [[TSCThemeManager sharedTheme] mainColor];
     
-    //Register for notifications
+    // Register for notifications
     [TSCStormNotificationHelper setupNotifications];
     
     return YES;
 }
 
-//Registering for notifications
+// Registering for notifications
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
 {
     [TSCStormNotificationHelper registerForRemoteNotifications];
@@ -81,9 +81,10 @@
     [TSCStormNotificationHelper registerPushToken:deviceToken];
 }
 
-//Handling developer mode
+// Handling developer mode
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     [[TSCDeveloperController sharedController] appResumedFromBackground];
 }
+
 @end
