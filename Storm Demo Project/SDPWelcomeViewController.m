@@ -27,7 +27,7 @@
     
     self.view.backgroundColor = [[TSCThemeManager sharedTheme] mainColor];
     
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, self.view.frame.size.width, 35)];
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 35, self.view.frame.size.width, 35)];
     nameLabel.font = [UIFont boldSystemFontOfSize:28];
     nameLabel.text = [NSString stringWithLocalisationKey:@"_LITE_TITLE"];
     nameLabel.textAlignment = NSTextAlignmentCenter;
@@ -46,12 +46,12 @@
     messageLabel.center = CGPointMake(self.view.center.x, messageLabel.center.y);
     
     UIImageView *stormImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"outer-logo"]];
-    stormImage.frame = CGRectMake(0, messageLabel.frame.origin.y + messageLabel.frame.size.height + 30, stormImage.frame.size.width + 20, stormImage.frame.size.height + 20);
+    stormImage.frame = CGRectMake(0, messageLabel.frame.origin.y + messageLabel.frame.size.height + 20, stormImage.frame.size.width + 20, stormImage.frame.size.height + 20);
     stormImage.center = CGPointMake(self.view.center.x, stormImage.center.y);
     [self.view addSubview:stormImage];
     
-    UILabel *shakeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, stormImage.frame.size.height + stormImage.frame.origin.y + 50, 250, 35)];
-    shakeLabel.font = [UIFont boldSystemFontOfSize:35];
+    UILabel *shakeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, stormImage.frame.size.height + stormImage.frame.origin.y + 25, 250, 35)];
+    shakeLabel.font = [UIFont boldSystemFontOfSize:28];
     shakeLabel.text = [NSString stringWithLocalisationKey:@"_LITE_SHAKE_LABEL"];
     shakeLabel.textAlignment = NSTextAlignmentCenter;
     shakeLabel.textColor = [[TSCThemeManager sharedTheme] primaryLabelColor];
