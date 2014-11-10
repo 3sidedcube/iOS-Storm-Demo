@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33BC395019FE4A2000D00987 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BC394F19FE4A2000D00987 /* LaunchScreen.xib */; };
 		33C47FA41A0B6A66007BD920 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33C47FA31A0B6A66007BD920 /* Settings.bundle */; };
+		36207E431A10D42F00DCF4D8 /* SDPListPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36207E421A10D42F00DCF4D8 /* SDPListPage.m */; };
 		36402DEA1A0B71E700C0FBD1 /* SDPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36402DE91A0B71E700C0FBD1 /* SDPWelcomeViewController.m */; };
 		C226783519E2B2CC0070B470 /* ThunderCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; };
 		C226783619E2B2CC0070B470 /* ThunderCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -140,6 +141,8 @@
 /* Begin PBXFileReference section */
 		33BC394F19FE4A2000D00987 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		33C47FA31A0B6A66007BD920 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		36207E411A10D42F00DCF4D8 /* SDPListPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPListPage.h; sourceTree = "<group>"; };
+		36207E421A10D42F00DCF4D8 /* SDPListPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPListPage.m; sourceTree = "<group>"; };
 		36402DE81A0B71E700C0FBD1 /* SDPWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPWelcomeViewController.h; sourceTree = "<group>"; };
 		36402DE91A0B71E700C0FBD1 /* SDPWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPWelcomeViewController.m; sourceTree = "<group>"; };
 		C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderCloud.xcodeproj; path = "Thunder Cloud/ThunderCloud.xcodeproj"; sourceTree = "<group>"; };
@@ -182,6 +185,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36207E3C1A10D3B900DCF4D8 /* Overrides */ = {
+			isa = PBXGroup;
+			children = (
+				36207E411A10D42F00DCF4D8 /* SDPListPage.h */,
+				36207E421A10D42F00DCF4D8 /* SDPListPage.m */,
+			);
+			name = Overrides;
+			sourceTree = "<group>";
+		};
 		C226781219E2B2950070B470 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +255,7 @@
 		C2C57C0019E2AAEC000F6F1E /* Storm Demo Project */ = {
 			isa = PBXGroup;
 			children = (
+				36207E3C1A10D3B900DCF4D8 /* Overrides */,
 				C2C57C2E19E2AC08000F6F1E /* View Controllers */,
 				C2C57C0519E2AAEC000F6F1E /* AppDelegate.h */,
 				C2C57C0619E2AAEC000F6F1E /* AppDelegate.m */,
@@ -496,6 +509,7 @@
 				C2C57C0719E2AAEC000F6F1E /* AppDelegate.m in Sources */,
 				C2C57C0419E2AAEC000F6F1E /* main.m in Sources */,
 				36402DEA1A0B71E700C0FBD1 /* SDPWelcomeViewController.m in Sources */,
+				36207E431A10D42F00DCF4D8 /* SDPListPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
