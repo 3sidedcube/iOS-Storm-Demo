@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "StormTheme.h"
+#import "SDPWelcomeViewController.h"
 @import ThunderCloud;
-#import "TSCTestViewController.h"
-#import "TSCTestTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,42 +17,73 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
+    
+    //Setup the window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [TSCStormViewController registerNativePageName:@"intro" toViewControllerClass:[SDPWelcomeViewController class]];
     
     self.window.rootViewController = [TSCAppViewController new];
     
     [self.window makeKeyAndVisible];
     
-    //[TSCLocalisationController sharedController];
+    //Setup the shared theme
+    
+    StormTheme *stormTheme = [StormTheme new];
+    
+    [TSCThemeManager setSharedTheme:stormTheme];
+    
+    [[TSCDeveloperController sharedController] installDeveloperModeToWindow:self.window currentTheme:stormTheme];
+    
+    //Customise the app colours based on the values in the info.plist
+    if (![[[NSBundle mainBundle] infoDictionary][@"TSCAppTintColor"] isEqualToString:@"000000"]) {
+        UINavigationBar *navigationBar = [UINavigationBar appearance];
+        [navigationBar setBarTintColor:[[TSCThemeManager sharedTheme] mainColor]];
+    }
+    
+    if ([[[NSBundle mainBundle] infoDictionary][@"TSCStatusBarStyle"] isEqualToString:@"Black"]) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        UINavigationBar *navigationBar = [UINavigationBar appearance];
+        [navigationBar setTintColor:[UIColor blackColor]];
+        [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
+    }
+    
+    if ([[[NSBundle mainBundle] infoDictionary][@"TSCStatusBarStyle"] isEqualToString:@"White"]) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        UINavigationBar *navigationBar = [UINavigationBar appearance];
+        [navigationBar setTintColor:[UIColor whiteColor]];
+        [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    }
+    
+    UITabBar *tabBar = [UITabBar appearance];
+    tabBar.barTintColor = [UIColor whiteColor];
+    
+    self.window.tintColor = [[TSCThemeManager sharedTheme] mainColor];
+    
+    //Register for notifications
+    [TSCStormNotificationHelper setupNotifications];
     
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+//Registering for notifications
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    [TSCStormNotificationHelper registerForRemoteNotifications];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSLog(@"Token:%@", deviceToken.description);
+    [TSCStormNotificationHelper registerPushToken:deviceToken];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+//Handling developer mode
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [[TSCDeveloperController sharedController] appResumedFromBackground];
 }
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
 @end
