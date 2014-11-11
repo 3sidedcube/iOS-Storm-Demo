@@ -487,14 +487,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		C2C57C2719E2AB37000F6F1E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "##################################################\n# Setup variables for folders and plist entries  #\n# Generally you should only need to change the   #\n# baseFolder variable                            #\n##################################################\nbaseFolder=\"Storm Demo Project\";\nbundleFolder=\"Bundle\";\nappId=$(/usr/libexec/PlistBuddy -c \"Print TSCAppId\" \"$INFOPLIST_FILE\");\nbaseUrl=$(/usr/libexec/PlistBuddy -c \"Print TSCBaseURL\" \"$INFOPLIST_FILE\");\napiVersion=$(/usr/libexec/PlistBuddy -c \"Print TSCAPIVersion\" \"$INFOPLIST_FILE\");\n\n######################################################\n# MANUAL OVERRIDE                                    #\n# If you wish to pull a custom bundle define so here #\n######################################################\noverrideEnabled=FALSE\noverrideUrl=\"https://s3.amazonaws.com/arc.cubeapis.com/bundles/1/test/1369324617_1385400529.tar.gz\";\n\n###########################\n# Download latest files   #\n###########################\nmkdir -p \"$baseFolder/$appId\";\n\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\ncd \"../../\";\n\nif $overrideEnabled ; then\ncurl $overrideUrl -o \"bundle.tar.gz\" -v\nelse\n\ncurl $baseUrl/$apiVersion/apps/$appId/bundle?environment=live -vLo \"bundle.tar.gz\"\n\n#TEMPORARY. WE NEED TO GET STEVE TO ENABLE THE NEW REDIRECT\n\n#regex=\"file\\\":\\\"(.*)\\\"\"\n#json=$(curl $baseUrl/$apiVersion/apps/$appId/bundle?environment=test -s);\n#[[ $json =~ $regex ]]\n#filename=\"${BASH_REMATCH[1]}\"\n#curl ${filename//[\\\\]/} -o \"bundle.tar.gz\"\n\n#END TEMPORARY\nfi\n\n\ntar -zxf \"bundle.tar.gz\" -C \"$baseFolder/$appId\"\n\nrm \"bundle.tar.gz\"\n\n############################################################################################\n# Setup Bundle directory.                                                                  #\n# Ensure this folder is included as a refrenced folder in your project once it is created  #\n############################################################################################\nmkdir -p \"$baseFolder/$bundleFolder\";\n\nif [ -d \"$baseFolder/$bundleFolder\" ]; then\ncd \"$baseFolder/$bundleFolder\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\n#######################################################################\n# Copy downloaded files from numbered app folder into bundle folder   #\n#######################################################################\ncd \"../../\"\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do cp -R \"$i\" \"../$bundleFolder/$i\"; done;\nfi";
 		};
