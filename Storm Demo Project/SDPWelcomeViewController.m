@@ -8,6 +8,7 @@
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 #import "SDPWelcomeViewController.h"
+#import "SPDTracker.h"
 @import ThunderTable;
 @import ThunderCloud;
 
@@ -95,6 +96,8 @@
     self.logoView.center = CGPointMake(containterView.frame.size.width/2, containterView.frame.size.height/2);
     
     logoImage.center = self.logoView.center;
+    
+    [SPDTracker trackScreenNamed:[NSString stringWithFormat:@"%@ > %@", [[NSBundle mainBundle] infoDictionary][@"CFBundleDisplayName"], @"Native Page"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

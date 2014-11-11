@@ -13,6 +13,11 @@
 		36402DEA1A0B71E700C0FBD1 /* SDPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36402DE91A0B71E700C0FBD1 /* SDPWelcomeViewController.m */; };
 		36CA67C11A1216320027E061 /* SPDStandardListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA67C01A1216320027E061 /* SPDStandardListItem.m */; };
 		36CA67C41A1216550027E061 /* SPDEmbeddedLinksListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA67C31A1216550027E061 /* SPDEmbeddedLinksListItemCell.m */; };
+		36CA67EA1A126A680027E061 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA67E91A126A680027E061 /* libGoogleAnalyticsServices.a */; };
+		36CA67FD1A126BBC0027E061 /* SPDTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA67FC1A126BBC0027E061 /* SPDTracker.m */; };
+		36CA67FF1A126C0F0027E061 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA67FE1A126C0F0027E061 /* libz.dylib */; };
+		36CA68011A126C160027E061 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA68001A126C160027E061 /* CoreData.framework */; };
+		36CA68031A126C1F0027E061 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA68021A126C1F0027E061 /* SystemConfiguration.framework */; };
 		C226783519E2B2CC0070B470 /* ThunderCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; };
 		C226783619E2B2CC0070B470 /* ThunderCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C226783A19E2B2D30070B470 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782C19E2B2950070B470 /* ThunderRequest.framework */; };
@@ -151,6 +156,22 @@
 		36CA67C01A1216320027E061 /* SPDStandardListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDStandardListItem.m; sourceTree = "<group>"; };
 		36CA67C21A1216550027E061 /* SPDEmbeddedLinksListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDEmbeddedLinksListItemCell.h; sourceTree = "<group>"; };
 		36CA67C31A1216550027E061 /* SPDEmbeddedLinksListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDEmbeddedLinksListItemCell.m; sourceTree = "<group>"; };
+		36CA67E91A126A680027E061 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		36CA67F01A126AD40027E061 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		36CA67F11A126AD40027E061 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		36CA67F21A126AD40027E061 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		36CA67F31A126AD40027E061 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		36CA67F41A126AD40027E061 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		36CA67F51A126AD40027E061 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		36CA67F61A126AD40027E061 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		36CA67F71A126AD40027E061 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		36CA67F81A126AD40027E061 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		36CA67F91A126AD40027E061 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		36CA67FB1A126BBC0027E061 /* SPDTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDTracker.h; sourceTree = "<group>"; };
+		36CA67FC1A126BBC0027E061 /* SPDTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDTracker.m; sourceTree = "<group>"; };
+		36CA67FE1A126C0F0027E061 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		36CA68001A126C160027E061 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		36CA68021A126C1F0027E061 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderCloud.xcodeproj; path = "Thunder Cloud/ThunderCloud.xcodeproj"; sourceTree = "<group>"; };
 		C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderRequest.xcodeproj; path = "Thunder Request/ThunderRequest.xcodeproj"; sourceTree = "<group>"; };
 		C226781719E2B2950070B470 /* ThunderTable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderTable.xcodeproj; path = "Thunder Table/ThunderTable.xcodeproj"; sourceTree = "<group>"; };
@@ -174,6 +195,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CA67EA1A126A680027E061 /* libGoogleAnalyticsServices.a in Frameworks */,
+				36CA68031A126C1F0027E061 /* SystemConfiguration.framework in Frameworks */,
+				36CA68011A126C160027E061 /* CoreData.framework in Frameworks */,
+				36CA67FF1A126C0F0027E061 /* libz.dylib in Frameworks */,
 				C226783E19E2B2D70070B470 /* ThunderTable.framework in Frameworks */,
 				C226783519E2B2CC0070B470 /* ThunderCloud.framework in Frameworks */,
 				C226784219E2B2DC0070B470 /* ThunderBasics.framework in Frameworks */,
@@ -202,6 +227,32 @@
 				36CA67C31A1216550027E061 /* SPDEmbeddedLinksListItemCell.m */,
 			);
 			name = Overrides;
+			sourceTree = "<group>";
+		};
+		36CA67EF1A126A7E0027E061 /* Google Headers */ = {
+			isa = PBXGroup;
+			children = (
+				36CA67F01A126AD40027E061 /* GAI.h */,
+				36CA67F11A126AD40027E061 /* GAIDictionaryBuilder.h */,
+				36CA67F21A126AD40027E061 /* GAIEcommerceFields.h */,
+				36CA67F31A126AD40027E061 /* GAIEcommerceProduct.h */,
+				36CA67F41A126AD40027E061 /* GAIEcommerceProductAction.h */,
+				36CA67F51A126AD40027E061 /* GAIEcommercePromotion.h */,
+				36CA67F61A126AD40027E061 /* GAIFields.h */,
+				36CA67F71A126AD40027E061 /* GAILogger.h */,
+				36CA67F81A126AD40027E061 /* GAITrackedViewController.h */,
+				36CA67F91A126AD40027E061 /* GAITracker.h */,
+			);
+			name = "Google Headers";
+			sourceTree = "<group>";
+		};
+		36CA67FA1A126BA00027E061 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				36CA67FB1A126BBC0027E061 /* SPDTracker.h */,
+				36CA67FC1A126BBC0027E061 /* SPDTracker.m */,
+			);
+			name = Tracking;
 			sourceTree = "<group>";
 		};
 		C226781219E2B2950070B470 /* Products */ = {
@@ -243,6 +294,9 @@
 		C2C57BF519E2AAEC000F6F1E = {
 			isa = PBXGroup;
 			children = (
+				36CA68021A126C1F0027E061 /* SystemConfiguration.framework */,
+				36CA68001A126C160027E061 /* CoreData.framework */,
+				36CA67FE1A126C0F0027E061 /* libz.dylib */,
 				C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */,
 				C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */,
 				C226781719E2B2950070B470 /* ThunderTable.xcodeproj */,
@@ -265,6 +319,7 @@
 		C2C57C0019E2AAEC000F6F1E /* Storm Demo Project */ = {
 			isa = PBXGroup;
 			children = (
+				36CA67FA1A126BA00027E061 /* Tracking */,
 				36207E3C1A10D3B900DCF4D8 /* Overrides */,
 				C2C57C2E19E2AC08000F6F1E /* View Controllers */,
 				C2C57C0519E2AAEC000F6F1E /* AppDelegate.h */,
@@ -282,6 +337,8 @@
 		C2C57C0119E2AAEC000F6F1E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				36CA67EF1A126A7E0027E061 /* Google Headers */,
+				36CA67E91A126A680027E061 /* libGoogleAnalyticsServices.a */,
 				33BC394F19FE4A2000D00987 /* LaunchScreen.xib */,
 				C2C57C0219E2AAEC000F6F1E /* Info.plist */,
 				C2C57C0319E2AAEC000F6F1E /* main.m */,
@@ -517,6 +574,7 @@
 			files = (
 				36CA67C41A1216550027E061 /* SPDEmbeddedLinksListItemCell.m in Sources */,
 				C2D21F0D19FE87BB00F145F5 /* StormTheme.m in Sources */,
+				36CA67FD1A126BBC0027E061 /* SPDTracker.m in Sources */,
 				C2C57C0719E2AAEC000F6F1E /* AppDelegate.m in Sources */,
 				C2C57C0419E2AAEC000F6F1E /* main.m in Sources */,
 				36CA67C11A1216320027E061 /* SPDStandardListItem.m in Sources */,
@@ -657,6 +715,15 @@
 				INFOPLIST_FILE = "Storm Demo Project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Storm",
+					Demo,
+					Project,
+					"$(PROJECT_DIR)/Storm",
+					Demo,
+					Project,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e3adaa18-e677-451d-a4bd-654842c18cb5";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -674,6 +741,15 @@
 				INFOPLIST_FILE = "Storm Demo Project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Storm",
+					Demo,
+					Project,
+					"$(PROJECT_DIR)/Storm",
+					Demo,
+					Project,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e3adaa18-e677-451d-a4bd-654842c18cb5";
 				TARGETED_DEVICE_FAMILY = 1;

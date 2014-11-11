@@ -11,6 +11,8 @@
 #import "SDPWelcomeViewController.h"
 #import "SDPListPage.h"
 #import "SPDStandardListItem.h"
+#import "GAI.h"
+#import "SPDTracker.h"
 @import ThunderCloud;
 
 @interface AppDelegate ()
@@ -68,6 +70,15 @@
     // Register for notifications
     [TSCStormNotificationHelper setupNotifications];
     
+    GAI *tracker = [GAI sharedInstance];
+    [tracker trackerWithTrackingId:[[NSBundle mainBundle] infoDictionary][@"TSCTrackingId"]];
+    [tracker setTrackUncaughtExceptions:YES];
+    [tracker setDispatchInterval:20];
+    
+    [SPDTracker trackEventWithCategory:[[NSBundle mainBundle] infoDictionary][@"CFBundleDisplayName"] action:[[NSBundle mainBundle] infoDictionary][@"CFBundleDisplayName"] label:[[NSBundle mainBundle] infoDictionary][@"CFBundleDisplayName"] value:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stormTrackingEvent:) name:@"TSCStatEventNotification" object:nil];
+    
     return YES;
 }
 
@@ -87,6 +98,19 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     [[TSCDeveloperController sharedController] appResumedFromBackground];
+}
+
+- (void)stormTrackingEvent:(NSNotification *)notification
+{
+    NSDictionary *dictionary = notification.userInfo;
+    
+    if ([dictionary[@"type"] isEqualToString:@"event"]) {
+        [SPDTracker trackEventWithCategory:[[NSBundle mainBundle] infoDictionary][@"CFBundleDisplayName"] action:dictionary[@"action"] label:dictionary[@"category"] value:nil];
+    }
+    
+    if ([dictionary[@"type"] isEqualToString:@"screen"]) {
+        [SPDTracker trackScreenNamed:[NSString stringWithFormat:@"%@ > %@", [[NSBundle mainBundle] infoDictionary][@"CFBundleDisplayName"], dictionary[@"name"]]];
+    }
 }
 
 - (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
