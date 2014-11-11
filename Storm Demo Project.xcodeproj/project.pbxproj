@@ -31,6 +31,7 @@
 		C2C57C0F19E2AAEC000F6F1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C57C0E19E2AAEC000F6F1E /* Images.xcassets */; };
 		C2C57C1E19E2AAEC000F6F1E /* Storm_Demo_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57C1D19E2AAEC000F6F1E /* Storm_Demo_ProjectTests.m */; };
 		C2C57C3019E2ADBD000F6F1E /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2C57C2F19E2ADBD000F6F1E /* Bundle */; };
+		C2D0DBFD1A12775100C278F2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D0DBFC1A12775100C278F2 /* libsqlite3.dylib */; };
 		C2D21F0D19FE87BB00F145F5 /* StormTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D21F0C19FE87BB00F145F5 /* StormTheme.m */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +187,7 @@
 		C2C57C1C19E2AAEC000F6F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C57C1D19E2AAEC000F6F1E /* Storm_Demo_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Storm_Demo_ProjectTests.m; sourceTree = "<group>"; };
 		C2C57C2F19E2ADBD000F6F1E /* Bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundle; sourceTree = "<group>"; };
+		C2D0DBFC1A12775100C278F2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		C2D21F0B19FE87BB00F145F5 /* StormTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StormTheme.h; sourceTree = "<group>"; };
 		C2D21F0C19FE87BB00F145F5 /* StormTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StormTheme.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D0DBFD1A12775100C278F2 /* libsqlite3.dylib in Frameworks */,
 				36CA67EA1A126A680027E061 /* libGoogleAnalyticsServices.a in Frameworks */,
 				36CA68031A126C1F0027E061 /* SystemConfiguration.framework in Frameworks */,
 				36CA68011A126C160027E061 /* CoreData.framework in Frameworks */,
@@ -294,6 +297,7 @@
 		C2C57BF519E2AAEC000F6F1E = {
 			isa = PBXGroup;
 			children = (
+				C2D0DBFC1A12775100C278F2 /* libsqlite3.dylib */,
 				36CA68021A126C1F0027E061 /* SystemConfiguration.framework */,
 				36CA68001A126C160027E061 /* CoreData.framework */,
 				36CA67FE1A126C0F0027E061 /* libz.dylib */,
@@ -723,7 +727,11 @@
 					"$(PROJECT_DIR)/Storm",
 					Demo,
 					Project,
+					"$(PROJECT_DIR)/Storm",
+					Demo,
+					Project,
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e3adaa18-e677-451d-a4bd-654842c18cb5";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -749,7 +757,11 @@
 					"$(PROJECT_DIR)/Storm",
 					Demo,
 					Project,
+					"$(PROJECT_DIR)/Storm",
+					Demo,
+					Project,
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e3adaa18-e677-451d-a4bd-654842c18cb5";
 				TARGETED_DEVICE_FAMILY = 1;
