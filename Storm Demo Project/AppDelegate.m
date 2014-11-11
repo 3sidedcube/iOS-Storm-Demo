@@ -10,6 +10,7 @@
 #import "StormTheme.h"
 #import "SDPWelcomeViewController.h"
 #import "SDPListPage.h"
+#import "SPDStandardListItem.h"
 @import ThunderCloud;
 
 @interface AppDelegate ()
@@ -27,6 +28,7 @@
     
     [TSCStormViewController registerNativePageName:@"intro" toViewControllerClass:[SDPWelcomeViewController class]];
     [TSCStormObject overideClass:[TSCListPage class] with:[SDPListPage class]];
+    [TSCStormObject overideClass:[TSCStandardListItem class] with:[SPDStandardListItem class]];
     
     self.window.rootViewController = [TSCAppViewController new];
     
