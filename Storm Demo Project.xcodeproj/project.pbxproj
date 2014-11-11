@@ -11,6 +11,8 @@
 		33C47FA41A0B6A66007BD920 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33C47FA31A0B6A66007BD920 /* Settings.bundle */; };
 		36207E431A10D42F00DCF4D8 /* SDPListPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36207E421A10D42F00DCF4D8 /* SDPListPage.m */; };
 		36402DEA1A0B71E700C0FBD1 /* SDPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36402DE91A0B71E700C0FBD1 /* SDPWelcomeViewController.m */; };
+		36CA67C11A1216320027E061 /* SPDStandardListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA67C01A1216320027E061 /* SPDStandardListItem.m */; };
+		36CA67C41A1216550027E061 /* SPDEmbeddedLinksListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA67C31A1216550027E061 /* SPDEmbeddedLinksListItemCell.m */; };
 		C226783519E2B2CC0070B470 /* ThunderCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; };
 		C226783619E2B2CC0070B470 /* ThunderCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C226783A19E2B2D30070B470 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782C19E2B2950070B470 /* ThunderRequest.framework */; };
@@ -145,6 +147,10 @@
 		36207E421A10D42F00DCF4D8 /* SDPListPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPListPage.m; sourceTree = "<group>"; };
 		36402DE81A0B71E700C0FBD1 /* SDPWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPWelcomeViewController.h; sourceTree = "<group>"; };
 		36402DE91A0B71E700C0FBD1 /* SDPWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPWelcomeViewController.m; sourceTree = "<group>"; };
+		36CA67BF1A1216320027E061 /* SPDStandardListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDStandardListItem.h; sourceTree = "<group>"; };
+		36CA67C01A1216320027E061 /* SPDStandardListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDStandardListItem.m; sourceTree = "<group>"; };
+		36CA67C21A1216550027E061 /* SPDEmbeddedLinksListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDEmbeddedLinksListItemCell.h; sourceTree = "<group>"; };
+		36CA67C31A1216550027E061 /* SPDEmbeddedLinksListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDEmbeddedLinksListItemCell.m; sourceTree = "<group>"; };
 		C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderCloud.xcodeproj; path = "Thunder Cloud/ThunderCloud.xcodeproj"; sourceTree = "<group>"; };
 		C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderRequest.xcodeproj; path = "Thunder Request/ThunderRequest.xcodeproj"; sourceTree = "<group>"; };
 		C226781719E2B2950070B470 /* ThunderTable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderTable.xcodeproj; path = "Thunder Table/ThunderTable.xcodeproj"; sourceTree = "<group>"; };
@@ -190,6 +196,10 @@
 			children = (
 				36207E411A10D42F00DCF4D8 /* SDPListPage.h */,
 				36207E421A10D42F00DCF4D8 /* SDPListPage.m */,
+				36CA67BF1A1216320027E061 /* SPDStandardListItem.h */,
+				36CA67C01A1216320027E061 /* SPDStandardListItem.m */,
+				36CA67C21A1216550027E061 /* SPDEmbeddedLinksListItemCell.h */,
+				36CA67C31A1216550027E061 /* SPDEmbeddedLinksListItemCell.m */,
 			);
 			name = Overrides;
 			sourceTree = "<group>";
@@ -505,9 +515,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CA67C41A1216550027E061 /* SPDEmbeddedLinksListItemCell.m in Sources */,
 				C2D21F0D19FE87BB00F145F5 /* StormTheme.m in Sources */,
 				C2C57C0719E2AAEC000F6F1E /* AppDelegate.m in Sources */,
 				C2C57C0419E2AAEC000F6F1E /* main.m in Sources */,
+				36CA67C11A1216320027E061 /* SPDStandardListItem.m in Sources */,
 				36402DEA1A0B71E700C0FBD1 /* SDPWelcomeViewController.m in Sources */,
 				36207E431A10D42F00DCF4D8 /* SDPListPage.m in Sources */,
 			);
