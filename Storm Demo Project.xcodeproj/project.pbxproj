@@ -730,8 +730,12 @@
 					"$(PROJECT_DIR)/Storm",
 					Demo,
 					Project,
+					"\"$(SRCROOT)/Storm Demo Project\"",
 				);
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e3adaa18-e677-451d-a4bd-654842c18cb5";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -760,8 +764,12 @@
 					"$(PROJECT_DIR)/Storm",
 					Demo,
 					Project,
+					"\"$(SRCROOT)/Storm Demo Project\"",
 				);
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e3adaa18-e677-451d-a4bd-654842c18cb5";
 				TARGETED_DEVICE_FAMILY = 1;
