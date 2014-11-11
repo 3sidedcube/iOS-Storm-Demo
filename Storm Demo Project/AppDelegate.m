@@ -89,4 +89,24 @@
     [[TSCDeveloperController sharedController] appResumedFromBackground];
 }
 
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    UINavigationController *navController = (UINavigationController *)self.window.rootViewController.presentedViewController;
+    
+    if ([navController respondsToSelector:@selector(visibleViewController)]) {
+        
+        if ([navController.visibleViewController isKindOfClass:[TSCMultiVideoPlayerViewController class]] || [navController.visibleViewController isKindOfClass:[TSCVideoLanguageSelectionViewController class]]) {
+            return UIInterfaceOrientationMaskAllButUpsideDown;
+        } else {
+            return UIInterfaceOrientationMaskPortrait;
+        }
+    }
+    
+    if ([navController isKindOfClass:[TSCMultiVideoPlayerViewController class]] || [NSStringFromClass([navController class]) isEqualToString:@"TSCMediaPlayerViewController"]) {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    }
+    
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 @end
