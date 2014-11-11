@@ -25,39 +25,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self addParticles];
+    
     self.view.backgroundColor = [[TSCThemeManager sharedTheme] mainColor];
     
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 35, self.view.frame.size.width, 35)];
+    UIImageView *stormImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"outer-logo"]];
+    stormImage.frame = CGRectMake(0, 0, stormImage.frame.size.width + 20, stormImage.frame.size.height + 20);
+    stormImage.center = self.view.center;
+    [self.view addSubview:stormImage];
+    
+    UIView *labelContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, stormImage.frame.origin.y)];
+    [self.view addSubview:labelContainer];
+    
+    UIView *labelWrapper = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0)];
+    [labelContainer addSubview:labelWrapper];
+    
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 35)];
     nameLabel.font = [UIFont boldSystemFontOfSize:28];
     nameLabel.text = [NSString stringWithLocalisationKey:@"_LITE_TITLE"];
     nameLabel.textAlignment = NSTextAlignmentCenter;
     nameLabel.textColor = [[TSCThemeManager sharedTheme] primaryLabelColor];
-    [self.view addSubview:nameLabel];
+    [labelWrapper addSubview:nameLabel];
     
-    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, nameLabel.frame.origin.y + nameLabel.frame.size.height + 15, 250, 35)];
+    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, nameLabel.frame.origin.y + nameLabel.frame.size.height + 5, 250, 35)];
     messageLabel.font = [UIFont systemFontOfSize:26];
     messageLabel.text = [NSString stringWithLocalisationKey:@"_LITE_TITLE_DESCRIPTION"];
     messageLabel.textColor = [[TSCThemeManager sharedTheme] primaryLabelColor];
     messageLabel.lineBreakMode = NSLineBreakByWordWrapping;
     messageLabel.numberOfLines = 2;
     messageLabel.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:messageLabel];
+    [labelWrapper addSubview:messageLabel];
     [messageLabel sizeToFit];
     messageLabel.center = CGPointMake(self.view.center.x, messageLabel.center.y);
     
-    UIImageView *stormImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"outer-logo"]];
-    stormImage.frame = CGRectMake(0, messageLabel.frame.origin.y + messageLabel.frame.size.height + 20, stormImage.frame.size.width + 20, stormImage.frame.size.height + 20);
-    stormImage.center = CGPointMake(self.view.center.x, stormImage.center.y);
-    [self.view addSubview:stormImage];
+    labelWrapper.frame = CGRectMake(0, 0, self.view.frame.size.width, messageLabel.frame.size.height + messageLabel.frame.origin.y);
+    labelWrapper.center = labelContainer.center;
     
-    UILabel *shakeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, stormImage.frame.size.height + stormImage.frame.origin.y + 25, 250, 35)];
+    UIView *shakeContainer = [[UIView alloc] initWithFrame:CGRectMake(0, stormImage.frame.origin.y + stormImage.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - (stormImage.frame.origin.y + stormImage.frame.size.height) - self.tabBarController.tabBar.frame.size.height)];
+    [self.view addSubview:shakeContainer];
+    
+    UILabel *shakeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (shakeContainer.frame.size.height/2) - (35/2), 250, 35)];
     shakeLabel.font = [UIFont boldSystemFontOfSize:28];
     shakeLabel.text = [NSString stringWithLocalisationKey:@"_LITE_SHAKE_LABEL"];
     shakeLabel.textAlignment = NSTextAlignmentCenter;
     shakeLabel.textColor = [[TSCThemeManager sharedTheme] primaryLabelColor];
     [shakeLabel sizeToFit];
     shakeLabel.center = CGPointMake(self.view.center.x, shakeLabel.center.y);
-    [self.view addSubview:shakeLabel];
+    [shakeContainer addSubview:shakeLabel];
     [self shakeItBaby:shakeLabel];
     
     self.flashImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"flash"]];
@@ -81,8 +95,6 @@
     self.logoView.center = CGPointMake(containterView.frame.size.width/2, containterView.frame.size.height/2);
     
     logoImage.center = self.logoView.center;
-    
-    [self performSelector:@selector(flipCenter) withObject:nil afterDelay:5.0];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -90,6 +102,11 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:YES];
+    
+//    if (!self.hasAppeared) {
+//        [self performSelector:@selector(flipCenter) withObject:nil afterDelay:5.0];
+//        self.hasAppeared = YES;
+//    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -106,24 +123,24 @@
 
 - (void)flipCenter
 {
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        
-        if (self.flipped) {
-            [UIView transitionFromView:self.logoView toView:self.flashImage duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
-                if (finished) {
-                    self.flipped = NO;
-                    [self performSelector:@selector(flipCenter) withObject:nil afterDelay:5.0];
-                }
-            }];
-        } else {
-            [UIView transitionFromView:self.flashImage toView:self.logoView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
-                if (finished) {
-                    self.flipped = YES;
-                    [self performSelector:@selector(flipCenter) withObject:nil afterDelay:5.0];
-                }
-            }];
-        }
-    }];
+//    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//        
+//        if (self.flipped) {
+//            [UIView transitionFromView:self.logoView toView:self.flashImage duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+//                if (finished) {
+//                    self.flipped = NO;
+//                    [self performSelector:@selector(flipCenter) withObject:nil afterDelay:5.0];
+//                }
+//            }];
+//        } else {
+//            [UIView transitionFromView:self.flashImage toView:self.logoView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+//                if (finished) {
+//                    self.flipped = YES;
+//                    [self performSelector:@selector(flipCenter) withObject:nil afterDelay:5.0];
+//                }
+//            }];
+//        }
+//    }];
 }
 
 - (void)shakeItBaby:(UIView *)view
