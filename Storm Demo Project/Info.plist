@@ -30,12 +30,12 @@
 	<string>v1.0</string>
 	<key>TSCAppId</key>
 	<string>1</string>
+	<key>TSCAppTintColor</key>
+	<string>4AB4E4</string>
 	<key>TSCBaseURL</key>
 	<string>https://api.stormcorp.co</string>
 	<key>TSCBuildDate</key>
 	<string>1401196463</string>
-	<key>TSCAppTintColor</key>
-	<string>4AB4E4</string>
 	<key>TSCStatusBarStyle</key>
 	<string>White</string>
 	<key>TSCTrackingId</key>
