@@ -258,6 +258,22 @@
 			name = Tracking;
 			sourceTree = "<group>";
 		};
+		4977AD5F1AB877B400763C20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2D0DBFC1A12775100C278F2 /* libsqlite3.dylib */,
+				36CA68021A126C1F0027E061 /* SystemConfiguration.framework */,
+				36CA68001A126C160027E061 /* CoreData.framework */,
+				36CA67FE1A126C0F0027E061 /* libz.dylib */,
+				C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */,
+				C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */,
+				C226781719E2B2950070B470 /* ThunderTable.xcodeproj */,
+				C226781A19E2B2950070B470 /* ThunderBasics.xcodeproj */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		C226781219E2B2950070B470 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,14 +313,6 @@
 		C2C57BF519E2AAEC000F6F1E = {
 			isa = PBXGroup;
 			children = (
-				C2D0DBFC1A12775100C278F2 /* libsqlite3.dylib */,
-				36CA68021A126C1F0027E061 /* SystemConfiguration.framework */,
-				36CA68001A126C160027E061 /* CoreData.framework */,
-				36CA67FE1A126C0F0027E061 /* libz.dylib */,
-				C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */,
-				C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */,
-				C226781719E2B2950070B470 /* ThunderTable.xcodeproj */,
-				C226781A19E2B2950070B470 /* ThunderBasics.xcodeproj */,
 				C2C57C0019E2AAEC000F6F1E /* Storm Demo Project */,
 				C2C57C1A19E2AAEC000F6F1E /* Storm Demo ProjectTests */,
 				C2C57BFF19E2AAEC000F6F1E /* Products */,
@@ -323,17 +331,17 @@
 		C2C57C0019E2AAEC000F6F1E /* Storm Demo Project */ = {
 			isa = PBXGroup;
 			children = (
-				36CA67FA1A126BA00027E061 /* Tracking */,
-				36207E3C1A10D3B900DCF4D8 /* Overrides */,
-				C2C57C2E19E2AC08000F6F1E /* View Controllers */,
 				C2C57C0519E2AAEC000F6F1E /* AppDelegate.h */,
 				C2C57C0619E2AAEC000F6F1E /* AppDelegate.m */,
 				C2D21F0B19FE87BB00F145F5 /* StormTheme.h */,
 				C2D21F0C19FE87BB00F145F5 /* StormTheme.m */,
-				33C47FA31A0B6A66007BD920 /* Settings.bundle */,
+				36CA67FA1A126BA00027E061 /* Tracking */,
+				36207E3C1A10D3B900DCF4D8 /* Overrides */,
+				C2C57C2E19E2AC08000F6F1E /* View Controllers */,
 				C2C57C0E19E2AAEC000F6F1E /* Images.xcassets */,
 				C2C57C2F19E2ADBD000F6F1E /* Bundle */,
 				C2C57C0119E2AAEC000F6F1E /* Supporting Files */,
+				4977AD5F1AB877B400763C20 /* Frameworks */,
 			);
 			path = "Storm Demo Project";
 			sourceTree = "<group>";
@@ -341,6 +349,7 @@
 		C2C57C0119E2AAEC000F6F1E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				33C47FA31A0B6A66007BD920 /* Settings.bundle */,
 				36CA67EF1A126A7E0027E061 /* Google Headers */,
 				36CA67E91A126A680027E061 /* libGoogleAnalyticsServices.a */,
 				33BC394F19FE4A2000D00987 /* LaunchScreen.xib */,
@@ -713,7 +722,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 3 Sided Cube Design Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Storm Demo Project/Info.plist";
@@ -737,7 +746,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e3adaa18-e677-451d-a4bd-654842c18cb5";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -747,7 +756,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 3 Sided Cube Design Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Storm Demo Project/Info.plist";
@@ -771,7 +780,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e3adaa18-e677-451d-a4bd-654842c18cb5";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
