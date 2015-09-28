@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9BC3F7515F009BF4DD2705F183F283B2B27D1B91",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D682F49FB8B61EFCC558A1669AB91A34B5405C7B" : 0,
+    "193D8DBD0766390F6F29C61CBF1A23C888FE12E3" : 0,
+    "48D1D77F8E696CFD83C9D9AC0D062062AD5CA998" : 0,
+    "33527851E4D7276FEDA473DB1496A42DDA6B5681" : 0,
+    "9BC3F7515F009BF4DD2705F183F283B2B27D1B91" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "40294376-4D6D-44E6-857D-7C1B88A46734",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D682F49FB8B61EFCC558A1669AB91A34B5405C7B" : "Storm%20DemoThunder%20Basics",
+    "193D8DBD0766390F6F29C61CBF1A23C888FE12E3" : "Storm%20DemoThunder%20Cloud",
+    "48D1D77F8E696CFD83C9D9AC0D062062AD5CA998" : "Storm%20DemoThunder%20Request",
+    "33527851E4D7276FEDA473DB1496A42DDA6B5681" : "Storm%20DemoThunder%20Table",
+    "9BC3F7515F009BF4DD2705F183F283B2B27D1B91" : "Storm%20Demo"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Storm Demo Project",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Storm Demo Project.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/3sidedcube\/iOS-ThunderCloud.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "193D8DBD0766390F6F29C61CBF1A23C888FE12E3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/3sidedcube\/iOS-ThunderTable.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "33527851E4D7276FEDA473DB1496A42DDA6B5681"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/3sidedcube\/iOS-ThunderRequest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "48D1D77F8E696CFD83C9D9AC0D062062AD5CA998"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/3sidedcube\/iOS-Storm-Demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9BC3F7515F009BF4DD2705F183F283B2B27D1B91"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/3sidedcube\/iOS-ThunderBasics.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D682F49FB8B61EFCC558A1669AB91A34B5405C7B"
+    }
+  ]
+}

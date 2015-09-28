@@ -14,6 +14,7 @@
 #import "GAI.h"
 #import "SPDTracker.h"
 @import ThunderCloud;
+@import CoreSpotlight;
 
 @interface AppDelegate ()
 
@@ -23,26 +24,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
-    // Setup the window
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
     [TSCStormViewController registerNativePageName:@"intro" toViewControllerClass:[SDPWelcomeViewController class]];
     [TSCStormObject overideClass:[TSCListPage class] with:[SDPListPage class]];
     [TSCStormObject overideClass:[TSCStandardListItem class] with:[SPDStandardListItem class]];
     
-    self.window.rootViewController = [TSCAppViewController new];
-    
-    [self.window makeKeyAndVisible];
+    [super application:application didFinishLaunchingWithOptions:launchOptions];
     
     // Setup the shared theme
     
     StormTheme *stormTheme = [StormTheme new];
-    
     [TSCThemeManager setSharedTheme:stormTheme];
-    
-    [[TSCDeveloperController sharedController] installDeveloperModeToWindow:self.window currentTheme:stormTheme];
+    [TSCDeveloperController sharedController].currentTheme = stormTheme;
     
     // Customise the app colours based on the values in the info.plist
     UINavigationBar *navigationBar = [UINavigationBar appearance];
@@ -61,7 +53,7 @@
         [navigationBar setTintColor:[UIColor whiteColor]];
         [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     }
-    
+        
     UITabBar *tabBar = [UITabBar appearance];
     tabBar.barTintColor = [UIColor whiteColor];
     
@@ -82,23 +74,7 @@
     return YES;
 }
 
-// Registering for notifications
-- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
-{
-    [TSCStormNotificationHelper registerForRemoteNotifications];
-}
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-    NSLog(@"Token:%@", deviceToken.description);
-    [TSCStormNotificationHelper registerPushToken:deviceToken];
-}
-
 // Handling developer mode
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    [[TSCDeveloperController sharedController] appResumedFromBackground];
-}
 
 - (void)stormTrackingEvent:(NSNotification *)notification
 {
