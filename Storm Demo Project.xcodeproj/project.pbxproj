@@ -36,6 +36,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4903DC241BFF15050090B2CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1177ED81BBAF18E00372D4D;
+			remoteInfo = ThunderRequestMac;
+		};
+		4903DC261BFF15050090B2CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1177EE21BBAF18E00372D4D;
+			remoteInfo = ThunderRequestMacTests;
+		};
+		4903DC281BFF15050090B2CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49084FD11BD13DBD0012F636;
+			remoteInfo = ThunderRequestTV;
+		};
 		C226781F19E2B2950070B470 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C226781A19E2B2950070B470 /* ThunderBasics.xcodeproj */;
@@ -288,6 +309,9 @@
 			children = (
 				C226782C19E2B2950070B470 /* ThunderRequest.framework */,
 				C226782E19E2B2950070B470 /* ThunderRequestTests.xctest */,
+				4903DC251BFF15050090B2CF /* ThunderRequestMac.framework */,
+				4903DC271BFF15050090B2CF /* ThunderRequestMacTests.xctest */,
+				4903DC291BFF15050090B2CF /* ThunderRequestTV.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -485,6 +509,27 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		4903DC251BFF15050090B2CF /* ThunderRequestMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ThunderRequestMac.framework;
+			remoteRef = 4903DC241BFF15050090B2CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4903DC271BFF15050090B2CF /* ThunderRequestMacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ThunderRequestMacTests.xctest;
+			remoteRef = 4903DC261BFF15050090B2CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4903DC291BFF15050090B2CF /* ThunderRequestTV.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ThunderRequestTV.framework;
+			remoteRef = 4903DC281BFF15050090B2CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C226782019E2B2950070B470 /* ThunderBasics.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -576,7 +621,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "##################################################\n# Setup variables for folders and plist entries  #\n# Generally you should only need to change the   #\n# baseFolder variable                            #\n##################################################\nbaseFolder=\"Storm Demo Project\";\nbundleFolder=\"Bundle\";\nappId=$(/usr/libexec/PlistBuddy -c \"Print TSCAppId\" \"$INFOPLIST_FILE\");\nbaseUrl=$(/usr/libexec/PlistBuddy -c \"Print TSCBaseURL\" \"$INFOPLIST_FILE\");\napiVersion=$(/usr/libexec/PlistBuddy -c \"Print TSCAPIVersion\" \"$INFOPLIST_FILE\");\n\n######################################################\n# MANUAL OVERRIDE                                    #\n# If you wish to pull a custom bundle define so here #\n######################################################\noverrideEnabled=FALSE\noverrideUrl=\"https://s3.amazonaws.com/arc.cubeapis.com/bundles/1/test/1369324617_1385400529.tar.gz\";\n\n###########################\n# Download latest files   #\n###########################\nmkdir -p \"$baseFolder/$appId\";\n\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\ncd \"../../\";\n\nif $overrideEnabled ; then\ncurl $overrideUrl -o \"bundle.tar.gz\" -v\nelse\n\ncurl $baseUrl/$apiVersion/apps/$appId/bundle?environment=live -vLo \"bundle.tar.gz\"\n\n#TEMPORARY. WE NEED TO GET STEVE TO ENABLE THE NEW REDIRECT\n\n#regex=\"file\\\":\\\"(.*)\\\"\"\n#json=$(curl $baseUrl/$apiVersion/apps/$appId/bundle?environment=test -s);\n#[[ $json =~ $regex ]]\n#filename=\"${BASH_REMATCH[1]}\"\n#curl ${filename//[\\\\]/} -o \"bundle.tar.gz\"\n\n#END TEMPORARY\nfi\n\n\ntar -zxf \"bundle.tar.gz\" -C \"$baseFolder/$appId\"\n\nrm \"bundle.tar.gz\"\n\n############################################################################################\n# Setup Bundle directory.                                                                  #\n# Ensure this folder is included as a refrenced folder in your project once it is created  #\n############################################################################################\nmkdir -p \"$baseFolder/$bundleFolder\";\n\nif [ -d \"$baseFolder/$bundleFolder\" ]; then\ncd \"$baseFolder/$bundleFolder\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\n#######################################################################\n# Copy downloaded files from numbered app folder into bundle folder   #\n#######################################################################\ncd \"../../\"\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do cp -R \"$i\" \"../$bundleFolder/$i\"; done;\nfi";
+			shellScript = "##################################################\n# Setup variables for folders and plist entries  #\n# Generally you should only need to change the   #\n# baseFolder variable                            #\n##################################################\nbaseFolder=$PROJECT_NAME;\nbundleFolder=\"Bundle\";\nappId=$(/usr/libexec/PlistBuddy -c \"Print TSCAppId\" \"$INFOPLIST_FILE\");\nbaseUrl=$(/usr/libexec/PlistBuddy -c \"Print TSCBaseURL\" \"$INFOPLIST_FILE\");\napiVersion=$(/usr/libexec/PlistBuddy -c \"Print TSCAPIVersion\" \"$INFOPLIST_FILE\");\n\n######################################################\n# MANUAL OVERRIDE                                    #\n# If you wish to pull a custom bundle define so here #\n######################################################\noverrideEnabled=FALSE\noverrideUrl=\"https://s3.amazonaws.com/arc.cubeapis.com/bundles/1/test/1369324617_1385400529.tar.gz\";\n\n###########################\n# Download latest files   #\n###########################\nmkdir -p \"$baseFolder/$appId\";\n\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\ncd \"../../\";\n\nif $overrideEnabled ; then\ncurl $overrideUrl -o \"bundle.tar.gz\" -v\nelse\n\ncurl $baseUrl/$apiVersion/apps/$appId/bundle?environment=live -vLo \"bundle.tar.gz\"\n\n#TEMPORARY. WE NEED TO GET STEVE TO ENABLE THE NEW REDIRECT\n\n#regex=\"file\\\":\\\"(.*)\\\"\"\n#json=$(curl $baseUrl/$apiVersion/apps/$appId/bundle?environment=test -s);\n#[[ $json =~ $regex ]]\n#filename=\"${BASH_REMATCH[1]}\"\n#curl ${filename//[\\\\]/} -o \"bundle.tar.gz\"\n\n#END TEMPORARY\nfi\n\n\ntar -zxf \"bundle.tar.gz\" -C \"$baseFolder/$appId\"\n\nrm \"bundle.tar.gz\"\n\n############################################################################################\n# Setup Bundle directory.                                                                  #\n# Ensure this folder is included as a refrenced folder in your project once it is created  #\n############################################################################################\nmkdir -p \"$baseFolder/$bundleFolder\";\n\nif [ -d \"$baseFolder/$bundleFolder\" ]; then\ncd \"$baseFolder/$bundleFolder\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\n#######################################################################\n# Copy downloaded files from numbered app folder into bundle folder   #\n#######################################################################\ncd \"../../\"\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do cp -R \"$i\" \"../$bundleFolder/$i\"; done;\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
