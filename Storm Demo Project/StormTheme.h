@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 @import ThunderTable;
 
-@interface StormTheme : TSCDefaultTheme <TSCTheme>
+@interface StormTheme : TSCTheme
 
 @end
