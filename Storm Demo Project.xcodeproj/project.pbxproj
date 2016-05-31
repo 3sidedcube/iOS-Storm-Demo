@@ -18,14 +18,14 @@
 		36CA67FF1A126C0F0027E061 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA67FE1A126C0F0027E061 /* libz.dylib */; };
 		36CA68011A126C160027E061 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA68001A126C160027E061 /* CoreData.framework */; };
 		36CA68031A126C1F0027E061 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA68021A126C1F0027E061 /* SystemConfiguration.framework */; };
-		C226783519E2B2CC0070B470 /* ThunderCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; };
-		C226783619E2B2CC0070B470 /* ThunderCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C226783A19E2B2D30070B470 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782C19E2B2950070B470 /* ThunderRequest.framework */; };
-		C226783B19E2B2D30070B470 /* ThunderRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782C19E2B2950070B470 /* ThunderRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C226783E19E2B2D70070B470 /* ThunderTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226783219E2B2950070B470 /* ThunderTable.framework */; };
-		C226783F19E2B2D70070B470 /* ThunderTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226783219E2B2950070B470 /* ThunderTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C226784219E2B2DC0070B470 /* ThunderBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782019E2B2950070B470 /* ThunderBasics.framework */; };
-		C226784319E2B2DC0070B470 /* ThunderBasics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782019E2B2950070B470 /* ThunderBasics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1BA10AF1CFDE47300901218 /* ThunderCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; };
+		B1BA10B01CFDE47300901218 /* ThunderCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C226782619E2B2950070B470 /* ThunderCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1BA10B41CFDE47800901218 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA10A01CFDE3BB00901218 /* ThunderRequest.framework */; };
+		B1BA10B51CFDE47800901218 /* ThunderRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA10A01CFDE3BB00901218 /* ThunderRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1BA10B81CFDE47D00901218 /* ThunderTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA10AC1CFDE3BB00901218 /* ThunderTable.framework */; };
+		B1BA10B91CFDE47D00901218 /* ThunderTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA10AC1CFDE3BB00901218 /* ThunderTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1BA10BC1CFDE48200901218 /* ThunderBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA10961CFDE3BB00901218 /* ThunderBasics.framework */; };
+		B1BA10BD1CFDE48200901218 /* ThunderBasics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA10961CFDE3BB00901218 /* ThunderBasics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C2C57C0419E2AAEC000F6F1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57C0319E2AAEC000F6F1E /* main.m */; };
 		C2C57C0719E2AAEC000F6F1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57C0619E2AAEC000F6F1E /* AppDelegate.m */; };
 		C2C57C0F19E2AAEC000F6F1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C57C0E19E2AAEC000F6F1E /* Images.xcassets */; };
@@ -36,40 +36,96 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4903DC241BFF15050090B2CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B1177ED81BBAF18E00372D4D;
-			remoteInfo = ThunderRequestMac;
-		};
-		4903DC261BFF15050090B2CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B1177EE21BBAF18E00372D4D;
-			remoteInfo = ThunderRequestMacTests;
-		};
-		4903DC281BFF15050090B2CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 49084FD11BD13DBD0012F636;
-			remoteInfo = ThunderRequestTV;
-		};
-		C226781F19E2B2950070B470 /* PBXContainerItemProxy */ = {
+		B1BA10951CFDE3BB00901218 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C226781A19E2B2950070B470 /* ThunderBasics.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C272EF8419C831AB004BD339;
 			remoteInfo = ThunderBasics;
 		};
-		C226782119E2B2950070B470 /* PBXContainerItemProxy */ = {
+		B1BA10971CFDE3BB00901218 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C226781A19E2B2950070B470 /* ThunderBasics.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C272EF8F19C831AC004BD339;
 			remoteInfo = ThunderBasicsTests;
+		};
+		B1BA109F1CFDE3BB00901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2E5088219C835A300350F00;
+			remoteInfo = ThunderRequest;
+		};
+		B1BA10A11CFDE3BB00901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2E5088D19C835A300350F00;
+			remoteInfo = ThunderRequestTests;
+		};
+		B1BA10A31CFDE3BB00901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1177ED81BBAF18E00372D4D;
+			remoteInfo = ThunderRequestMac;
+		};
+		B1BA10A51CFDE3BB00901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1177EE21BBAF18E00372D4D;
+			remoteInfo = ThunderRequestMacTests;
+		};
+		B1BA10A71CFDE3BB00901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49084FD11BD13DBD0012F636;
+			remoteInfo = ThunderRequestTV;
+		};
+		B1BA10AB1CFDE3BB00901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781719E2B2950070B470 /* ThunderTable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2E5098219C839F600350F00;
+			remoteInfo = ThunderTable;
+		};
+		B1BA10AD1CFDE3BB00901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781719E2B2950070B470 /* ThunderTable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2E5098D19C839F600350F00;
+			remoteInfo = ThunderTableTests;
+		};
+		B1BA10B11CFDE47300901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C284D46E19C83FC600DA5EE3;
+			remoteInfo = ThunderCloud;
+		};
+		B1BA10B61CFDE47800901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C2E5088119C835A300350F00;
+			remoteInfo = ThunderRequest;
+		};
+		B1BA10BA1CFDE47D00901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781719E2B2950070B470 /* ThunderTable.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C2E5098119C839F600350F00;
+			remoteInfo = ThunderTable;
+		};
+		B1BA10BE1CFDE48200901218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C226781A19E2B2950070B470 /* ThunderBasics.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C272EF8319C831AB004BD339;
+			remoteInfo = ThunderBasics;
 		};
 		C226782519E2B2950070B470 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -85,62 +141,6 @@
 			remoteGlobalIDString = C284D47A19C83FC600DA5EE3;
 			remoteInfo = ThunderCloudTests;
 		};
-		C226782B19E2B2950070B470 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C2E5088219C835A300350F00;
-			remoteInfo = ThunderRequest;
-		};
-		C226782D19E2B2950070B470 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C2E5088D19C835A300350F00;
-			remoteInfo = ThunderRequestTests;
-		};
-		C226783119E2B2950070B470 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781719E2B2950070B470 /* ThunderTable.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C2E5098219C839F600350F00;
-			remoteInfo = ThunderTable;
-		};
-		C226783319E2B2950070B470 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781719E2B2950070B470 /* ThunderTable.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C2E5098D19C839F600350F00;
-			remoteInfo = ThunderTableTests;
-		};
-		C226783719E2B2CC0070B470 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C284D46E19C83FC600DA5EE3;
-			remoteInfo = ThunderCloud;
-		};
-		C226783C19E2B2D30070B470 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C2E5088119C835A300350F00;
-			remoteInfo = ThunderRequest;
-		};
-		C226784019E2B2D70070B470 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781719E2B2950070B470 /* ThunderTable.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C2E5098119C839F600350F00;
-			remoteInfo = ThunderTable;
-		};
-		C226784419E2B2DC0070B470 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C226781A19E2B2950070B470 /* ThunderBasics.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C272EF8319C831AB004BD339;
-			remoteInfo = ThunderBasics;
-		};
 		C2C57C1819E2AAEC000F6F1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2C57BF619E2AAEC000F6F1E /* Project object */;
@@ -151,16 +151,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C226783919E2B2CC0070B470 /* Embed Frameworks */ = {
+		B1BA10B31CFDE47300901218 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C226783F19E2B2D70070B470 /* ThunderTable.framework in Embed Frameworks */,
-				C226783619E2B2CC0070B470 /* ThunderCloud.framework in Embed Frameworks */,
-				C226784319E2B2DC0070B470 /* ThunderBasics.framework in Embed Frameworks */,
-				C226783B19E2B2D30070B470 /* ThunderRequest.framework in Embed Frameworks */,
+				B1BA10B91CFDE47D00901218 /* ThunderTable.framework in Embed Frameworks */,
+				B1BA10B01CFDE47300901218 /* ThunderCloud.framework in Embed Frameworks */,
+				B1BA10BD1CFDE48200901218 /* ThunderBasics.framework in Embed Frameworks */,
+				B1BA10B51CFDE47800901218 /* ThunderRequest.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,9 +195,9 @@
 		36CA68001A126C160027E061 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		36CA68021A126C1F0027E061 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderCloud.xcodeproj; path = "Thunder Cloud/ThunderCloud.xcodeproj"; sourceTree = "<group>"; };
-		C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderRequest.xcodeproj; path = "Thunder Request/ThunderRequest.xcodeproj"; sourceTree = "<group>"; };
-		C226781719E2B2950070B470 /* ThunderTable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderTable.xcodeproj; path = "Thunder Table/ThunderTable.xcodeproj"; sourceTree = "<group>"; };
-		C226781A19E2B2950070B470 /* ThunderBasics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderBasics.xcodeproj; path = "Thunder Basics/ThunderBasics.xcodeproj"; sourceTree = "<group>"; };
+		C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderRequest.xcodeproj; path = "Thunder Cloud/ThunderRequest/ThunderRequest.xcodeproj"; sourceTree = "<group>"; };
+		C226781719E2B2950070B470 /* ThunderTable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderTable.xcodeproj; path = "Thunder Cloud/ThunderTable/ThunderTable.xcodeproj"; sourceTree = "<group>"; };
+		C226781A19E2B2950070B470 /* ThunderBasics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderBasics.xcodeproj; path = "Thunder Cloud/ThunderBasics/ThunderBasics.xcodeproj"; sourceTree = "<group>"; };
 		C2C57BFE19E2AAEC000F6F1E /* Storm Demo Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storm Demo Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C57C0219E2AAEC000F6F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C57C0319E2AAEC000F6F1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -219,14 +219,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2D0DBFD1A12775100C278F2 /* libsqlite3.dylib in Frameworks */,
+				B1BA10B41CFDE47800901218 /* ThunderRequest.framework in Frameworks */,
 				36CA67EA1A126A680027E061 /* libGoogleAnalyticsServices.a in Frameworks */,
 				36CA68031A126C1F0027E061 /* SystemConfiguration.framework in Frameworks */,
+				B1BA10B81CFDE47D00901218 /* ThunderTable.framework in Frameworks */,
+				B1BA10AF1CFDE47300901218 /* ThunderCloud.framework in Frameworks */,
 				36CA68011A126C160027E061 /* CoreData.framework in Frameworks */,
 				36CA67FF1A126C0F0027E061 /* libz.dylib in Frameworks */,
-				C226783E19E2B2D70070B470 /* ThunderTable.framework in Frameworks */,
-				C226783519E2B2CC0070B470 /* ThunderCloud.framework in Frameworks */,
-				C226784219E2B2DC0070B470 /* ThunderBasics.framework in Frameworks */,
-				C226783A19E2B2D30070B470 /* ThunderRequest.framework in Frameworks */,
+				B1BA10BC1CFDE48200901218 /* ThunderBasics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,41 +295,41 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		B1BA108D1CFDE3BB00901218 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1BA10AC1CFDE3BB00901218 /* ThunderTable.framework */,
+				B1BA10AE1CFDE3BB00901218 /* ThunderTableTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1BA108F1CFDE3BB00901218 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1BA10961CFDE3BB00901218 /* ThunderBasics.framework */,
+				B1BA10981CFDE3BB00901218 /* ThunderBasicsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1BA10911CFDE3BB00901218 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1BA10A01CFDE3BB00901218 /* ThunderRequest.framework */,
+				B1BA10A21CFDE3BB00901218 /* ThunderRequestTests.xctest */,
+				B1BA10A41CFDE3BB00901218 /* ThunderRequestMac.framework */,
+				B1BA10A61CFDE3BB00901218 /* ThunderRequestMacTests.xctest */,
+				B1BA10A81CFDE3BB00901218 /* ThunderRequestTV.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C226781219E2B2950070B470 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				C226782619E2B2950070B470 /* ThunderCloud.framework */,
 				C226782819E2B2950070B470 /* ThunderCloudTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C226781519E2B2950070B470 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C226782C19E2B2950070B470 /* ThunderRequest.framework */,
-				C226782E19E2B2950070B470 /* ThunderRequestTests.xctest */,
-				4903DC251BFF15050090B2CF /* ThunderRequestMac.framework */,
-				4903DC271BFF15050090B2CF /* ThunderRequestMacTests.xctest */,
-				4903DC291BFF15050090B2CF /* ThunderRequestTV.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C226781819E2B2950070B470 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C226783219E2B2950070B470 /* ThunderTable.framework */,
-				C226783419E2B2950070B470 /* ThunderTableTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C226781B19E2B2950070B470 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C226782019E2B2950070B470 /* ThunderBasics.framework */,
-				C226782219E2B2950070B470 /* ThunderBasicsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -420,15 +420,15 @@
 				C2C57BFA19E2AAEC000F6F1E /* Sources */,
 				C2C57BFB19E2AAEC000F6F1E /* Frameworks */,
 				C2C57BFC19E2AAEC000F6F1E /* Resources */,
-				C226783919E2B2CC0070B470 /* Embed Frameworks */,
+				B1BA10B31CFDE47300901218 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C226783819E2B2CC0070B470 /* PBXTargetDependency */,
-				C226783D19E2B2D30070B470 /* PBXTargetDependency */,
-				C226784119E2B2D70070B470 /* PBXTargetDependency */,
-				C226784519E2B2DC0070B470 /* PBXTargetDependency */,
+				B1BA10B21CFDE47300901218 /* PBXTargetDependency */,
+				B1BA10B71CFDE47800901218 /* PBXTargetDependency */,
+				B1BA10BB1CFDE47D00901218 /* PBXTargetDependency */,
+				B1BA10BF1CFDE48200901218 /* PBXTargetDependency */,
 			);
 			name = "Storm Demo Project";
 			productName = "Storm Demo Project";
@@ -484,7 +484,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C226781B19E2B2950070B470 /* Products */;
+					ProductGroup = B1BA108F1CFDE3BB00901218 /* Products */;
 					ProjectRef = C226781A19E2B2950070B470 /* ThunderBasics.xcodeproj */;
 				},
 				{
@@ -492,11 +492,11 @@
 					ProjectRef = C226781119E2B2950070B470 /* ThunderCloud.xcodeproj */;
 				},
 				{
-					ProductGroup = C226781519E2B2950070B470 /* Products */;
+					ProductGroup = B1BA10911CFDE3BB00901218 /* Products */;
 					ProjectRef = C226781419E2B2950070B470 /* ThunderRequest.xcodeproj */;
 				},
 				{
-					ProductGroup = C226781819E2B2950070B470 /* Products */;
+					ProductGroup = B1BA108D1CFDE3BB00901218 /* Products */;
 					ProjectRef = C226781719E2B2950070B470 /* ThunderTable.xcodeproj */;
 				},
 			);
@@ -509,39 +509,67 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		4903DC251BFF15050090B2CF /* ThunderRequestMac.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ThunderRequestMac.framework;
-			remoteRef = 4903DC241BFF15050090B2CF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4903DC271BFF15050090B2CF /* ThunderRequestMacTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ThunderRequestMacTests.xctest;
-			remoteRef = 4903DC261BFF15050090B2CF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4903DC291BFF15050090B2CF /* ThunderRequestTV.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ThunderRequestTV.framework;
-			remoteRef = 4903DC281BFF15050090B2CF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C226782019E2B2950070B470 /* ThunderBasics.framework */ = {
+		B1BA10961CFDE3BB00901218 /* ThunderBasics.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ThunderBasics.framework;
-			remoteRef = C226781F19E2B2950070B470 /* PBXContainerItemProxy */;
+			remoteRef = B1BA10951CFDE3BB00901218 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C226782219E2B2950070B470 /* ThunderBasicsTests.xctest */ = {
+		B1BA10981CFDE3BB00901218 /* ThunderBasicsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ThunderBasicsTests.xctest;
-			remoteRef = C226782119E2B2950070B470 /* PBXContainerItemProxy */;
+			remoteRef = B1BA10971CFDE3BB00901218 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B1BA10A01CFDE3BB00901218 /* ThunderRequest.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ThunderRequest.framework;
+			remoteRef = B1BA109F1CFDE3BB00901218 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B1BA10A21CFDE3BB00901218 /* ThunderRequestTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ThunderRequestTests.xctest;
+			remoteRef = B1BA10A11CFDE3BB00901218 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B1BA10A41CFDE3BB00901218 /* ThunderRequestMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ThunderRequestMac.framework;
+			remoteRef = B1BA10A31CFDE3BB00901218 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B1BA10A61CFDE3BB00901218 /* ThunderRequestMacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ThunderRequestMacTests.xctest;
+			remoteRef = B1BA10A51CFDE3BB00901218 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B1BA10A81CFDE3BB00901218 /* ThunderRequestTV.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ThunderRequestTV.framework;
+			remoteRef = B1BA10A71CFDE3BB00901218 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B1BA10AC1CFDE3BB00901218 /* ThunderTable.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ThunderTable.framework;
+			remoteRef = B1BA10AB1CFDE3BB00901218 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B1BA10AE1CFDE3BB00901218 /* ThunderTableTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ThunderTableTests.xctest;
+			remoteRef = B1BA10AD1CFDE3BB00901218 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		C226782619E2B2950070B470 /* ThunderCloud.framework */ = {
@@ -556,34 +584,6 @@
 			fileType = wrapper.cfbundle;
 			path = ThunderCloudTests.xctest;
 			remoteRef = C226782719E2B2950070B470 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C226782C19E2B2950070B470 /* ThunderRequest.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ThunderRequest.framework;
-			remoteRef = C226782B19E2B2950070B470 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C226782E19E2B2950070B470 /* ThunderRequestTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ThunderRequestTests.xctest;
-			remoteRef = C226782D19E2B2950070B470 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C226783219E2B2950070B470 /* ThunderTable.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ThunderTable.framework;
-			remoteRef = C226783119E2B2950070B470 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C226783419E2B2950070B470 /* ThunderTableTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ThunderTableTests.xctest;
-			remoteRef = C226783319E2B2950070B470 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -612,14 +612,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		C2C57C2719E2AB37000F6F1E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "##################################################\n# Setup variables for folders and plist entries  #\n# Generally you should only need to change the   #\n# baseFolder variable                            #\n##################################################\nbaseFolder=$PROJECT_NAME;\nbundleFolder=\"Bundle\";\nappId=$(/usr/libexec/PlistBuddy -c \"Print TSCAppId\" \"$INFOPLIST_FILE\");\nbaseUrl=$(/usr/libexec/PlistBuddy -c \"Print TSCBaseURL\" \"$INFOPLIST_FILE\");\napiVersion=$(/usr/libexec/PlistBuddy -c \"Print TSCAPIVersion\" \"$INFOPLIST_FILE\");\n\n######################################################\n# MANUAL OVERRIDE                                    #\n# If you wish to pull a custom bundle define so here #\n######################################################\noverrideEnabled=FALSE\noverrideUrl=\"https://s3.amazonaws.com/arc.cubeapis.com/bundles/1/test/1369324617_1385400529.tar.gz\";\n\n###########################\n# Download latest files   #\n###########################\nmkdir -p \"$baseFolder/$appId\";\n\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\ncd \"../../\";\n\nif $overrideEnabled ; then\ncurl $overrideUrl -o \"bundle.tar.gz\" -v\nelse\n\ncurl $baseUrl/$apiVersion/apps/$appId/bundle?environment=live -vLo \"bundle.tar.gz\"\n\n#TEMPORARY. WE NEED TO GET STEVE TO ENABLE THE NEW REDIRECT\n\n#regex=\"file\\\":\\\"(.*)\\\"\"\n#json=$(curl $baseUrl/$apiVersion/apps/$appId/bundle?environment=test -s);\n#[[ $json =~ $regex ]]\n#filename=\"${BASH_REMATCH[1]}\"\n#curl ${filename//[\\\\]/} -o \"bundle.tar.gz\"\n\n#END TEMPORARY\nfi\n\n\ntar -zxf \"bundle.tar.gz\" -C \"$baseFolder/$appId\"\n\nrm \"bundle.tar.gz\"\n\n############################################################################################\n# Setup Bundle directory.                                                                  #\n# Ensure this folder is included as a refrenced folder in your project once it is created  #\n############################################################################################\nmkdir -p \"$baseFolder/$bundleFolder\";\n\nif [ -d \"$baseFolder/$bundleFolder\" ]; then\ncd \"$baseFolder/$bundleFolder\"; for i in *; do rm -rf \"$i\"; done;\nfi\n\n#######################################################################\n# Copy downloaded files from numbered app folder into bundle folder   #\n#######################################################################\ncd \"../../\"\nif [ -d \"$baseFolder/$appId\" ]; then\ncd \"$baseFolder/$appId\"; for i in *; do cp -R \"$i\" \"../$bundleFolder/$i\"; done;\nfi";
 		};
@@ -652,25 +652,25 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C226783819E2B2CC0070B470 /* PBXTargetDependency */ = {
+		B1BA10B21CFDE47300901218 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ThunderCloud;
-			targetProxy = C226783719E2B2CC0070B470 /* PBXContainerItemProxy */;
+			targetProxy = B1BA10B11CFDE47300901218 /* PBXContainerItemProxy */;
 		};
-		C226783D19E2B2D30070B470 /* PBXTargetDependency */ = {
+		B1BA10B71CFDE47800901218 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ThunderRequest;
-			targetProxy = C226783C19E2B2D30070B470 /* PBXContainerItemProxy */;
+			targetProxy = B1BA10B61CFDE47800901218 /* PBXContainerItemProxy */;
 		};
-		C226784119E2B2D70070B470 /* PBXTargetDependency */ = {
+		B1BA10BB1CFDE47D00901218 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ThunderTable;
-			targetProxy = C226784019E2B2D70070B470 /* PBXContainerItemProxy */;
+			targetProxy = B1BA10BA1CFDE47D00901218 /* PBXContainerItemProxy */;
 		};
-		C226784519E2B2DC0070B470 /* PBXTargetDependency */ = {
+		B1BA10BF1CFDE48200901218 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ThunderBasics;
-			targetProxy = C226784419E2B2DC0070B470 /* PBXContainerItemProxy */;
+			targetProxy = B1BA10BE1CFDE48200901218 /* PBXContainerItemProxy */;
 		};
 		C2C57C1919E2AAEC000F6F1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -768,6 +768,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -803,6 +804,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
