@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>co.stormcorp.demo</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -32,13 +32,13 @@
 	<key>SDPPersonName</key>
 	<string>John</string>
 	<key>TSCAPIVersion</key>
-	<string>v1.0</string>
+	<string>v1.6</string>
 	<key>TSCAppId</key>
-	<string>1</string>
+	<string>3</string>
 	<key>TSCAppTintColor</key>
 	<string>4AB4E4</string>
 	<key>TSCBaseURL</key>
-	<string>https://api.stormcorp.co</string>
+	<string>https://gdpc.cubeapis.com/</string>
 	<key>TSCBuildDate</key>
 	<string>1401196463</string>
 	<key>TSCStatusBarStyle</key>
