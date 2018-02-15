@@ -12,7 +12,6 @@ import ThunderCloud
 @UIApplicationMain
 class AppDelegate: TSCAppDelegate {
 	
-	
 	override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
 		
 		StormObjectFactory.shared.override(class: ListPage.self, with: DemoListPage.self)
