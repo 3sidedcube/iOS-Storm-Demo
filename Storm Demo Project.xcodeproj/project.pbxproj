@@ -812,19 +812,7 @@
 				INFOPLIST_FILE = "Storm Demo Project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Storm",
-					Demo,
-					Project,
-					"$(PROJECT_DIR)/Storm",
-					Demo,
-					Project,
-					"$(PROJECT_DIR)/Storm",
-					Demo,
-					Project,
-					"\"$(SRCROOT)/Storm Demo Project\"",
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Storm Demo Project\"";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -852,19 +840,7 @@
 				INFOPLIST_FILE = "Storm Demo Project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Storm",
-					Demo,
-					Project,
-					"$(PROJECT_DIR)/Storm",
-					Demo,
-					Project,
-					"$(PROJECT_DIR)/Storm",
-					Demo,
-					Project,
-					"\"$(SRCROOT)/Storm Demo Project\"",
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Storm Demo Project\"";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
