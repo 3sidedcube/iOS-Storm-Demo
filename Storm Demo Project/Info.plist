@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>co.stormcorp.demo</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -22,27 +22,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>SDPLogoImageURL</key>
-	<string>http://bluffers.com/wp-content/uploads/2013/04/Twitter.png</string>
 	<key>SDPPersonName</key>
 	<string>John</string>
 	<key>TSCAPIVersion</key>
-	<string>v1.0</string>
+	<string>v1.6</string>
 	<key>TSCAppId</key>
-	<string>1</string>
-	<key>TSCAppTintColor</key>
-	<string>4AB4E4</string>
+	<string>44</string>
 	<key>TSCBaseURL</key>
-	<string>https://api.stormcorp.co</string>
+	<string>https://storm.cubeapis.com/</string>
 	<key>TSCBuildDate</key>
 	<string>1401196463</string>
-	<key>TSCStatusBarStyle</key>
-	<string>White</string>
 	<key>TSCTrackingId</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
