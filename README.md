@@ -13,6 +13,7 @@ This project uses all of our open source Storm libraries;
 - [Thunder Basics](https://github.com/3sidedcube/iOS-ThunderBasics)
 - [Thunder Table](https://github.com/3sidedcube/iOS-ThunderRequest)
 - [Thunder Request](https://github.com/3sidedcube/iOS-ThunderRequest)
+- [Thunder Collection](https://github.com/3sidedcube/iOS-ThunderCollection)
 
 ## Creation
 This project is a creation of [3 SIDED CUBE](https://3sidedcube.com)
