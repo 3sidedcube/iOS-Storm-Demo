@@ -25,7 +25,7 @@
 	<key>SDPPersonName</key>
 	<string>John</string>
 	<key>TSCAPIVersion</key>
-	<string>v1.6</string>
+	<string>latest</string>
 	<key>TSCAppId</key>
 	<string>44</string>
 	<key>TSCBaseURL</key>
